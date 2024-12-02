@@ -7,7 +7,8 @@ This mod is intended to work alongside **BetterContracts** (once it's updated fo
 > Boost your contracts by making more money, and allowing collection of the spoils!
 > - 50% more profit from every contract
 > - 10 max contracts
-> - 5 max contracts per type
+> - 5 max contracts per type by default
+> - Allow setting a custom amount per type of contract
 > - 50 total contracts available
 > - Borrowed contract equipment comes with free fieldwork items to fill your tools
 > - Allow using swathing equipment on harvest missions
@@ -181,3 +182,26 @@ For the example value that is already set in the file, setting `baleMission` to 
 - `<mowMission />` (per HA) [default value: `2500`]
 - `<tedderMission />` (per HA) [default value: `1500`]
 - `<stonePickMission />` (per HA) [default value: `2200`]
+
+
+The `customMaxPerType` allows setting a specific maximum amount of contracts per type.
+You can stop specific types from showing by setting the value to `0`. Furthermore the mod has a set maximum of 20 contracts per type.
+
+### All Game Defaults for Max Contracts per type 
+
+- `baleMission:` `3`
+- `baleWrapMission:` `2`
+- `plowMission:` `2`
+- `cultivateMission:` `3`
+- `sowMission:` `5`
+- `harvestMission:` `10`
+- `hoeMission:` `2`
+- `weedMission:` `2`
+- `herbicideMission:` `2`
+- `fertilizeMission:` `3`
+- `mowMission:` `3`
+- `tedderMission:` `2`
+- `stonePickMission:` `1`
+- `deadwoodMission:` `1`
+- `treeTransportMission:` `1`
+- `destructibleRockMission:` `1`

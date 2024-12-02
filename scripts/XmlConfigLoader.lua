@@ -112,6 +112,23 @@ function XmlConfigLoader.initXml()
 	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customRewards.deadwoodMission", "custom rewardPerTree for deadwoodMission", nil)
 	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customRewards.treeTransportMission", "custom rewardPerTree for treeTransportMission", nil)
 	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customRewards.destructibleRockMission", "custom rewardPerHa for destructibleRockMission", nil)
+
+	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customMaxPerType.baleMission", "custom maximum mission types for baleMissions", nil)
+	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customMaxPerType.baleWrapMission", "custom maximum mission types for baleWrapMission", nil)
+	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customMaxPerType.plowMission", "custom maximum mission types for plowMission", nil)
+	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customMaxPerType.cultivateMission", "custom maximum mission types for cultivateMission", nil)
+	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customMaxPerType.sowMission", "custom maximum mission types for sowMission", nil)
+	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customMaxPerType.harvestMission", "custom maximum mission types for harvestMission", nil)
+	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customMaxPerType.hoeMission", "custom maximum mission types for hoeMission", nil)
+	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customMaxPerType.weedMission", "custom maximum mission types for weedMission", nil)
+	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customMaxPerType.herbicideMission", "custom maximum mission types for herbicideMission", nil)
+	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customMaxPerType.fertilizeMission", "custom maximum mission types for fertilizeMission", nil)
+	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customMaxPerType.mowMission", "custom maximum mission types for mowMission", nil)
+	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customMaxPerType.tedderMission", "custom maximum mission types for tedderMission", nil)
+	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customMaxPerType.stonePickMission", "custom maximum mission types for stonePickMission", nil)
+	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customMaxPerType.deadwoodMission", "custom maximum mission types for deadwoodMission", nil)
+	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customMaxPerType.treeTransportMission", "custom maximum mission types for treeTransportMission", nil)
+	XmlConfigLoader.xmlSchema:register(XMLValueType.INT, XmlConfigLoader.xmlTag..".customMaxPerType.destructibleRockMission", "custom maximum mission types for destructibleRockMission", nil)
 	
 end
 
@@ -158,6 +175,23 @@ function XmlConfigLoader.importConfig(xmlFilename)
 		loadedConfig.customRewards.deadwoodMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customRewards.deadwoodMission", nil)
 		loadedConfig.customRewards.treeTransportMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customRewards.treeTransportMission", nil)
 		loadedConfig.customRewards.destructibleRockMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customRewards.destructibleRockMission", nil)
+
+		loadedConfig.customMaxPerType = {}
+		loadedConfig.customMaxPerType.baleMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customMaxPerType.baleMission", nil)
+		loadedConfig.customMaxPerType.baleWrapMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customMaxPerType.baleWrapMission", nil)
+		loadedConfig.customMaxPerType.plowMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customMaxPerType.plowMission", nil)
+		loadedConfig.customMaxPerType.cultivateMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customMaxPerType.cultivateMission", nil)
+		loadedConfig.customMaxPerType.sowMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customMaxPerType.sowMission", nil)
+		loadedConfig.customMaxPerType.harvestMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customMaxPerType.harvestMission", nil)
+		loadedConfig.customMaxPerType.hoeMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customMaxPerType.hoeMission", nil)
+		loadedConfig.customMaxPerType.weedMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customMaxPerType.weedMission", nil)
+		loadedConfig.customMaxPerType.herbicideMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customMaxPerType.herbicideMission", nil)
+		loadedConfig.customMaxPerType.mowMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customMaxPerType.mowMission", nil)
+		loadedConfig.customMaxPerType.tedderMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customMaxPerType.tedderMission", nil)
+		loadedConfig.customMaxPerType.stonePickMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customMaxPerType.stonePickMission", nil)
+		loadedConfig.customMaxPerType.deadwoodMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customMaxPerType.deadwoodMission", nil)
+		loadedConfig.customMaxPerType.treeTransportMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customMaxPerType.treeTransportMission", nil)
+		loadedConfig.customMaxPerType.destructibleRockMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customMaxPerType.destructibleRockMission", nil)
 
 		-- ensure that values are within limits for numerical values
 		if loadedConfig.rewardFactor < 0.1 or loadedConfig.rewardFactor > 5.0 then

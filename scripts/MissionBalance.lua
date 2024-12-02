@@ -29,6 +29,7 @@ function MissionBalance:scaleMissionReward()
             local prevValue = nil
             local newValue = nil
 
+            
             if ContractBoost.debug then
                 printf('---- ContractBoost:MissionBalance :: %s data', typeName)
                 DebugUtil.printTableRecursively(missionType.data)
@@ -53,8 +54,8 @@ function MissionBalance:scaleMissionReward()
                 missionType.data.rewardPerHa = newValue
             end
 
-            -- update the number of each type to 5
-            missionType.data.maxNumInstances = ContractBoost.config.maxContractsPerType
+            -- update the maximum number of each type to it's custom value if it exists else use the default
+            missionType.data.maxNumInstances = math.min(ContractBoost.config.customMaxPerType[typeName] or ContractBoost.config.maxContractsPerType, 20)
 
             if ContractBoost.debug then 
                 if newValue == prevValue and newValue == nil then
