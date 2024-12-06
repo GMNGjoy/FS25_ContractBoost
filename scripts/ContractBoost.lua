@@ -16,6 +16,11 @@ function ContractBoost:init()
     ContractBoost.config = XmlConfigLoader.init()
     ContractBoost.debug = ContractBoost.config.debugMode
 
+    source(g_currentModDirectory.."scripts/lib/UIHelper.lua")
+    source(g_currentModDirectory.."scripts/SettingsUI.lua")
+    ContractBoost.uiSettings = SettingsUI.new()
+    ContractBoost.uiSettings:injectUiSettings(ContractBoost.config)
+
     source(g_currentModDirectory.."scripts/MissionBalance.lua")
     source(g_currentModDirectory.."scripts/MissionBorrow.lua")
     source(g_currentModDirectory.."scripts/MissionTools.lua")

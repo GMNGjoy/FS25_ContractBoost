@@ -55,4 +55,5 @@ Changelog 1.0.0.2
     <extraSourceFiles>
         <sourceFile filename="scripts/ContractBoost.lua"/>
     </extraSourceFiles>
+    <l10n filenamePrefix="languages/l10n" />
 </modDesc>

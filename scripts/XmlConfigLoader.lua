@@ -152,6 +152,7 @@ function XmlConfigLoader.importConfig(xmlFilename)
 		loadedConfig.customRewards.hoeMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customRewards.hoeMission", nil)
 		loadedConfig.customRewards.weedMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customRewards.weedMission", nil)
 		loadedConfig.customRewards.herbicideMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customRewards.herbicideMission", nil)
+		loadedConfig.customRewards.fertilizeMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customRewards.fertilizeMission", nil)
 		loadedConfig.customRewards.mowMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customRewards.mowMission", nil)
 		loadedConfig.customRewards.tedderMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customRewards.tedderMission", nil)
 		loadedConfig.customRewards.stonePickMission = xmlFile:getValue(XmlConfigLoader.xmlTag..".customRewards.stonePickMission", nil)
@@ -179,6 +180,15 @@ function XmlConfigLoader.importConfig(xmlFilename)
 			printf('-- ContractBoost:XmlConfigLoader :: user configured maxContractsOverall (%d) outside of limits, reset to default.', loadedConfig.maxContractsOverall)
 			loadedConfig.maxContractsOverall = XmlConfigLoader.maxContractsOverall
 			
+		end
+
+		-- Custom rewards now only support steps of 500 since the introduction of UI settings
+		for propName, value in loadedConfig.customRewards do
+			if value ~= nil and value % 500 ~= 0 then
+				-- Round to steps of 500
+				loadedConfig.customRewards[propName] = math.floor((value + 250) / 500) * 500
+				printf('-- ContractBoost:XmlConfigLoader :: Rounded property customRewards.%s from %d to %d', propName, value, loadedConfig.customRewards[propName])
+			end
 		end
 		
 	end
