@@ -91,6 +91,12 @@ function MissionTools:setupAdditionalAllowedVehicles()
     end
     MissionTools.additionalAllowedVehicles.sowMission[WorkAreaTypes.CULTIVATOR] = true
 
+    -- allow windrowing for baling missions
+    if not MissionTools.additionalAllowedVehicles.baleMission then
+        MissionTools.additionalAllowedVehicles.baleMission = {}
+    end
+    MissionTools.additionalAllowedVehicles.baleMission[WorkAreaTypes.WINDROWER] = true
+
     -- baleMission = {},
     -- baleWrapMission = {},
     -- hoeMission = {},
@@ -101,7 +107,7 @@ function MissionTools:setupAdditionalAllowedVehicles()
     -- stonePickMission = {},
     -- deadwoodMission = {},
     -- treeTransportMission = {},
-    -- destructibleRockMission = {},
+    -- destructibleRockMission = {},d
 end
 
 -- replace the getIsMissionWorkAllowed with our own function that also checks the additional tools
@@ -195,10 +201,10 @@ function MissionTools.finishBaleWrapField(self, superFunc)
     BaleWrapMission:superClass().finishField(self)
 end
 
--- replace the BaleWrapMission.finishField function with our own function that doesn't remove the bales.
-function MissionTools.isAvailableForFieldBaleMission(self, superFunc, notNil)
+-- replace the isAvailableForField.finishField function with our own function that doesn't remove the bales.
+function MissionTools.isAvailableForFieldBaleMission(self, superFunc, notNil)		
     -- call the original method if collecting bales is not enabled
-    if g_currentMission.contractBoostSettings.preferStrawHarvestMissions then
+    if not g_currentMission.contractBoostSettings.preferStrawHarvestMissions then
         return superFunc(self, notNil)
     end
 
@@ -207,8 +213,16 @@ function MissionTools.isAvailableForFieldBaleMission(self, superFunc, notNil)
         return false
     end
 
+    -- look up the field state, the windrowFillType and the currentGrowthName for the crop in question
     local fieldState = self:getFieldState()
     local windrowFillType = g_fruitTypeManager:getWindrowFillTypeIndexByFruitTypeIndex(fieldState.fruitTypeIndex)
+    local fieldFruitType = g_fruitTypeManager:getFruitTypeByIndex(fieldState.fruitTypeIndex)
+    local currentGrowthName = fieldFruitType.growthStateToName[fieldState.growthState]
 
-    return not (windrowFillType == FillType.STRAW and math.random() < 0.5)
+    -- prevent baling missions on cereal crop fields in either harvestReady or greenBig states.
+    if windrowFillType == FillType.STRAW and (currentGrowthName == 'harvestReady' or currentGrowthName == 'greenBig') then
+        if ContractBoost.debug then Logging.info(MOD_NAME..':TOOLS :: preferStrawHarvestMissions preventing bale mission on farmland: %s | state: %s', self.farmland.name, currentGrowthName) end
+        return false
+    end
+    return isAvailableForField
 end

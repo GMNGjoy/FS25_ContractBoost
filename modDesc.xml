@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <modDesc descVersion="94">
     <author>GMNGjoy</author>
-    <version>1.0.8.4</version>
+    <version>1.0.8.6</version>
     <title>
         <en>Contract Boost</en>
         <de>Auftragssteigerung</de>
@@ -25,6 +25,8 @@ Features:
 - Allow collecting hay from tedding contracts
 - Allow collecting straw bales from baling contracts
 - Allow collecting wrapped silage bales from bale-wrapping contracts
+- Allow cultivating on seeding contracts, just in case you mess up
+- Allow windrowing on baling contracts, so you can use a worker to bale
 
 All of the above settings can be modified in-game through the General Settings panel.
 
@@ -41,6 +43,7 @@ Changelog 1.1.0.0 (in development)
 - Allow collecting straw bales from baling contracts.
 - Allow collecting wrapped silage bales from bale-wrapping contracts.
 - Added cultivator to seeding missions, just in case you mess up
+- Added windrower to baling missions, so you can use a worker to bale.
 - Added support customizing of the number of contracts for each type of contract individually, with the ability to "disable" contract types you don't want to see.
 - Added feature to remove already added fill items when the enableFieldworkToolFillItems setting is switched off
 - Added feature to remove unwanted contracts when you change the customMaxPerType setting. This setting is executed both on game load and save.

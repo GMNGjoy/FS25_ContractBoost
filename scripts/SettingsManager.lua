@@ -250,7 +250,7 @@ function SettingsManager:importConfig(xmlFilename, settingsObject)
             settingsObject.maxContractsPerFarm = SettingsManager.defaultConfig.maxContractsPerFarm
         end
 
-        if settingsObject.maxContractsPerType < 1 or settingsObject.maxContractsPerType > 20 then
+        if settingsObject.maxContractsPerType < 1 or settingsObject.maxContractsPerType > 25 then
             Logging.info(MOD_NAME..':LOAD :: user configured maxContractsPerType (%s) outside of limits, reset to default.', settingsObject.maxContractsPerType)
             settingsObject.maxContractsPerType = SettingsManager.defaultConfig.maxContractsPerType
         end
