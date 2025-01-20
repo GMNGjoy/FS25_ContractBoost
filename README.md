@@ -146,7 +146,7 @@ This set of boolean (`true|false`) settings stop new harvest contracts from bein
 
 
 ### Detailed explanation: `preferStrawHarvestMissions`
-This boolean (`true|false`) setting (default `true`) will prevent straw baling contracts from being created on harvest ready fields, indirectly allowing those fields to be available for harvesting contracts. This setting also prevents straw baling contracts from being created on "greenBig" field (one state before harvest ready), which the game allows for some odd reason. Having this setting on will still allow grass baling missions, and will still allow straw baling missions on harvested fields (which is a base game "feature"). NOTE: this will also affect fields that are enabled for straw that don't typically drop straw, when used alongside the Extended Straw Crops mod.
+This boolean (`true|false`) setting (default `true`) will prevent straw baling contracts from being created on `harvestReady` fields, indirectly allowing those fields to be available for harvesting contracts. This setting also prevents straw baling contracts from being created on `greenBig` field (one state before `harvestReady`), which the game allows for some odd reason. Having this setting on will still allow grass baling missions, and will still allow straw baling missions on harvested fields (which is a base game "feature"). NOTE: this will also affect fields that are enabled for straw that don't typically drop straw, when used alongside the Extended Straw Crops mod.
 
 
 ## Detailed Configuration Instructions (pre `1.0.3.0`)
