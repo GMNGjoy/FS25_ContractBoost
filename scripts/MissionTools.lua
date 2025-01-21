@@ -218,9 +218,10 @@ function MissionTools.isAvailableForFieldBaleMission(self, superFunc, notNil)
     local windrowFillType = g_fruitTypeManager:getWindrowFillTypeIndexByFruitTypeIndex(fieldState.fruitTypeIndex)
     local fieldFruitType = g_fruitTypeManager:getFruitTypeByIndex(fieldState.fruitTypeIndex)
     local currentGrowthName = fieldFruitType.growthStateToName[fieldState.growthState]
+    local cropHarvestReadyState = fieldFruitType.nameToGrowthState.HARVESTREADY
 
     -- prevent baling missions on cereal crop fields in either harvestReady or greenBig states.
-    if windrowFillType == FillType.STRAW and (currentGrowthName == 'harvestReady' or currentGrowthName == 'greenBig') then
+    if windrowFillType == FillType.STRAW and (fieldState.growthState <= cropHarvestReadyState) then
         if ContractBoost.debug then Logging.info(MOD_NAME..':TOOLS :: preferStrawHarvestMissions preventing bale mission on farmland: %s | state: %s', self.farmland.name, currentGrowthName) end
         return false
     end
