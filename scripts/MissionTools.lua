@@ -202,7 +202,7 @@ function MissionTools.finishBaleWrapField(self, superFunc)
 end
 
 -- replace the isAvailableForField.finishField function with our own function that doesn't remove the bales.
-function MissionTools.isAvailableForFieldBaleMission(self, superFunc, notNil)		
+function MissionTools.isAvailableForFieldBaleMission(self, superFunc, notNil)
     -- call the original method if collecting bales is not enabled
     if not g_currentMission.contractBoostSettings.preferStrawHarvestMissions then
         return superFunc(self, notNil)
@@ -218,11 +218,13 @@ function MissionTools.isAvailableForFieldBaleMission(self, superFunc, notNil)
     local windrowFillType = g_fruitTypeManager:getWindrowFillTypeIndexByFruitTypeIndex(fieldState.fruitTypeIndex)
     local fieldFruitType = g_fruitTypeManager:getFruitTypeByIndex(fieldState.fruitTypeIndex)
     local currentGrowthName = fieldFruitType.growthStateToName[fieldState.growthState]
-    local cropHarvestReadyState = fieldFruitType.nameToGrowthState.HARVESTREADY
+    local cropHarvestedState = fieldFruitType.nameToGrowthState.HARVESTED
 
     -- prevent baling missions on cereal crop fields in either harvestReady or greenBig states.
-    if windrowFillType == FillType.STRAW and (fieldState.growthState <= cropHarvestReadyState) then
-        if ContractBoost.debug then Logging.info(MOD_NAME..':TOOLS :: preferStrawHarvestMissions preventing bale mission on farmland: %s | state: %s', self.farmland.name, currentGrowthName) end
+    if windrowFillType == FillType.STRAW and fieldState.growthState ~= cropHarvestedState then
+        if ContractBoost.debug then
+            Logging.info(MOD_NAME..':TOOLS :: preferStrawHarvestMissions preventing bale mission on farmland: %s | crop: %s | state: %s', self.farmland.name, fieldFruitType.name, currentGrowthName)
+        end
         return false
     end
     return isAvailableForField
