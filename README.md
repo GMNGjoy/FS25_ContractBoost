@@ -63,7 +63,7 @@ _Enjoy!_
 - Added safety check for custom maps that don't contain every type of contract
 
 ### Changelog `1.1.0.0` _(still in development)_
-- User contributed translations: `fr`, `cz`, `it`, `pl`, `ru`, `da`
+- User contributed translations: `cz`, `da`, `fr`, `it`, `pl`, `pt`, `ru`
 - Allow collecting hay from tedding contracts
 - Allow collecting straw bales from baling contracts
 - Allow collecting wrapped silage bales from bale-wrapping contracts
@@ -89,6 +89,7 @@ All settings are now configurable within the UI. Note: most setting changes _**w
 ![Detailed customization of the rewards per contract type, as well as the maximum number of contracts that can be generated per type.](/_screenshots/screenshot_08_settingsCustomization.png)
 
 The previous configuration file is now _depreciated_, but will be used if it exists as the "defaults" until the settings are customized in-game.
+
 
 ### Dedicated Server settings
 On a dedicated server, the settings are saved on the server within the server's savegame directory, the same as it now is in single player. To edit those settings, you must edit those settings by one of two methods:
@@ -132,6 +133,7 @@ This setting can _ONLY_ be changed by manually editing your **Contract Boost** s
 > (a) re-enabling the `enableInGameSettingsMenu` by following the steps above but setting the value to true, or 
 > (b) editing the settings file directly when you're outside of the game for any settings changes that are needed.
 
+
 ### Detailed explanation: `enableCustomGrassFieldsForMissions`
 This boolean (`true|false`) setting will fix what I consider to be a major bug in the field system, that affects grass-based contracts pretty badly. If you play on a map (ie: Hutan Pantai) that has no grass fields specified in the map.i3d itself (relying on random generation), those grass fields will initially have contracts, but quickly will be destroyed by either cultivating or plowing contracts - and since NPC almost never re-plant grass on their own or via seeding contracts - this means you'll quickly lose all grass-based contracts. As a player, this pretty much sucks. This setting will check each time you load the game (and / or change your settings) to make sure two things - one, that every field that has grass in it is setup as `grassMissionOnly` (which prevents the cultivating or plowing steps), but also remove weeds on those same fields if they grow (which should never happen, shame on you Giants!)
 
@@ -146,7 +148,7 @@ This set of boolean (`true|false`) settings stop new harvest contracts from bein
 
 
 ### Detailed explanation: `preferStrawHarvestMissions`
-This boolean (`true|false`) setting (default `true`) will prevent straw baling contracts from being created on `harvestReady` fields, indirectly allowing those fields to be available for harvesting contracts. This setting also prevents straw baling contracts from being created on `greenBig` field (one state before `harvestReady`), which the game allows for some odd reason. Having this setting on will still allow grass baling missions, and will still allow straw baling missions on harvested fields (which is a base game "feature"). NOTE: this will also affect fields that are enabled for straw that don't typically drop straw, when used alongside the Extended Straw Crops mod.
+This boolean (`true|false`) setting (default `true`) will prevent straw baling contracts from being created on fields with the growth stage of `harvestReady`, or any earlier growth stage, indirectly allowing those fields to be available for harvesting contracts. Having this setting on will still allow grass baling missions, and will still allow straw baling missions on harvested fields (which is a base game "feature"), but the overall number of baling missions will appear to be very limted as the setting prefers harvesting over baling. NOTE: this will also affect fields that are enabled for straw that don't typically drop straw, when used alongside the Extended Straw Crops mod.
 
 
 ## Detailed Configuration Instructions (pre `1.0.3.0`)
@@ -306,6 +308,6 @@ You can stop specific types from showing by setting the value to `0`. Furthermor
 
 
 ## Known Issues
-- [SP|MP] Depending on the in-game month, the game will possibly grant you _Spraying_ contracts on fields that are withered. This is a bug in the base game, not the _Contract Boost_ mod - as you can't spray a withered field even if you own it. I've reported the bug to Giants.
+- [SP|MP] Depending on the in-game month, the game has a potential to generate _Spraying_ contracts on fields that are withered. This is a bug in the base game, not the _Contract Boost_ mod - as you can't spray a withered field even if you own it. I've reported the bug to Giants. If you mistakenly accept one of these contracts, the only solution is to cancel the contract.
 
-- [SP|MP] Changes to some settings may or may not reflect on contracts that are already either in the available contracts list, or in your accepted contracts list when you make contract boost settings changes; Most will take efffect right away, but depending on how you play - I'd always recommend making the changes you want, saving the game and at least exiting out to the main menu and coming back into your savegame. Especially on dedicated servers, it's always recommended to restart the server after making _Contract Boost_ settings changes.
+- [SP|MP] Changes to some settings may or may not reflect on contracts that are already either in the available contracts list, or in your accepted contracts list when you make contract boost settings changes; Most will take efffect right away, but depending on how you play - I'd always recommend making the changes you want, saving the game and at least exiting out to the main menu and coming back into your savegame. On dedicated servers, it's always recommended to restart the server after making _Contract Boost_ settings changes, to ensure that when players reconnect that the settings are synced properly.
