@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+    <translationContributors>
+        <translationContributor>etrigo1</translationContributor>
+    </translationContributors>
+    <texts>
+		<text name="contract_boosted" text="Contract Boost" />
+		
+		<text name="cb_enableStrawFromHarvestMissions_short" text="Permitir Recolha de Palha" />
+		<text name="cb_enableStrawFromHarvestMissions_long" text="Permite recolher palha de contratos de colheita." />
+		<text name="cb_enableSwathingForHarvestMissions_short" text="Permitir Corte com Enleirador" />
+		<text name="cb_enableSwathingForHarvestMissions_long" text="Permite utilizar um enleirador para contratos de colheita." />
+		<text name="cb_enableGrassFromMowingMissions_short" text="Permitir Recolha de Erva" />
+		<text name="cb_enableGrassFromMowingMissions_long" text="Permite recolher erva de contratos de corte." />
+		<text name="cb_enableHayFromTedderMissions_short" text="Permitir Recolha de Feno" />
+		<text name="cb_enableHayFromTedderMissions_long" text="Permite recolher feno de contratos de corte." />
+		<text name="cb_enableStonePickingFromMissions_short" text="Permitir Recolha de Pedras" />
+		<text name="cb_enableStonePickingFromMissions_long" text="Permite recolher pedras de contratos de lavoura e sementeira." />
+		<text name="cb_enableFieldworkToolFillItems_short" text="Adicionar Itens de Preenchimento de Equipamento" />
+		<text name="cb_enableFieldworkToolFillItems_long" text="Adiciona itens gratuitos para encher os equipamentos ao emprestar ferramentas para um contrato. Nota: ao concluir o contrato, os itens gratuitos serão removidos caso não sejam usados." />
+		<text name="cb_enableCollectingBalesFromMissions_short" text="Permitir Recolha de Fardos" />
+		<text name="cb_enableCollectingBalesFromMissions_long" text="Permite recolher fardos de contratos de enfardamento e de empacotamento de fardos. Nota: quando ativado, todos os fardos do contrato terão de ser recolhidos e permanecerão caso não sejam recolhidos." />
+		<text name="cb_enableCustomGrassFieldsForMissions_short" text="Suporte para Contratos de Campos de Erva Personalizados" />
+		<text name="cb_enableCustomGrassFieldsForMissions_long" text="Permite que campos de erva personalizados ou gerados dinamicamente funcionem corretamente em todos os contratos de erva. Com esta configuração desativada, campos de erva personalizados ou gerados estarão sujeitos a contratos de lavoura ou cultivo, e crescerão ervas daninhas." />
+		<text name="cb_preferStrawHarvestMissions_short" text="Preferir Contratos de Colheita a Enfardamento de Palha" />
+		<text name="cb_preferStrawHarvestMissions_long" text="Adiciona preferência por contratos de colheita em vez de contratos de enfardamento de palha para os mesmos campos. Esta configuração funciona melhor com um valor superior ao normal para o MaxPerType em Contratos de Colheita." />
+		
+		<text name="cb_enableHarvestContractNewCrops_short" text="Ativar Contratos de Colheita de Espinafre, Ervilha e Feijão-Verde" />
+		<text name="cb_enableHarvestContractNewCrops_long" text="Permite a geração de contratos de colheita para campos de espinafre, ervilha e feijão-verde. Esta configuração afeta apenas contratos de colheita." />
+		<text name="cb_enableHarvestContractPremiumCrops_short" text="Ativar Contratos de Colheita de Cenoura, Pastinaca e Beterraba Vermelha" />
+		<text name="cb_enableHarvestContractPremiumCrops_long" text="Permite a geração de contratos de colheita para campos de cenoura, pastinaca e beterraba vermelha. Esta configuração afeta apenas contratos de colheita." />
+		<text name="cb_enableHarvestContractRootCrops_short" text="Ativar Contratos de Colheita de Batata e Beterraba-Açucareira" />
+		<text name="cb_enableHarvestContractRootCrops_long" text="Permite a geração de contratos de colheita para campos de batata e beterraba-açucareira. Esta configuração afeta apenas contratos de colheita." />
+		<text name="cb_enableHarvestContractSugarcane_short" text="Ativar Contratos de Colheita de Cana-de-Açúcar" />
+		<text name="cb_enableHarvestContractSugarcane_long" text="Permite a geração de contratos de colheita para campos de cana-de-açúcar. Esta configuração afeta apenas contratos de colheita." />
+		<text name="cb_enableHarvestContractCotton_short" text="Ativar Contratos de Colheita de Algodão" />
+		<text name="cb_enableHarvestContractCotton_long" text="Permite a geração de contratos de colheita para campos de algodão. Esta configuração afeta apenas contratos de colheita." />
+		
+		<text name="cb_enableContractValueOverrides_short" text="Ativar Substituições de Valores de Contrato" />
+		<text name="cb_enableContractValueOverrides_long" text="Permite substituir os valores padrão do sistema de contratos. Desativa as próximas quatro configurações se estiver definido como falso." />
+		<text name="cb_rewardFactor_short" text="Fator de Recompensa" />
+		<text name="cb_rewardFactor_long" text="Multiplica todas as recompensas dos contratos pelo fator definido." />
+		<text name="cb_maxContractsPerFarm_short" text="Máximo de Contratos por Quinta" />
+		<text name="cb_maxContractsPerFarm_long" text="Define o número máximo de contratos que cada quinta pode ter ativos a qualquer momento." />
+		<text name="cb_maxContractsOverall_short" text="Máximo de Contratos Disponíveis" />
+		<text name="cb_maxContractsOverall_long" text="Define o número máximo de contratos que podem ser oferecidos." />
+		<text name="cb_maxContractsPerType_short" text="Máximo de Contratos por Tipo" />
+		<text name="cb_maxContractsPerType_long" text="Define o número máximo de contratos do mesmo tipo que podem ser oferecidos." />
+		
+		<text name="cb_baleMissionReward_short" text="Recompensa por Contrato de Enfardamento" />
+		<text name="cb_baleMissionReward_long" text="A recompensa por hectare para contratos de enfardamento. Se definido como '-', serão aplicadas as recompensas do jogo base." />
+		<text name="cb_baleWrapMissionReward_short" text="Recompensa por Contrato de Empacotamento de Fardos" />
+		<text name="cb_baleWrapMissionReward_long" text="A recompensa por fardo para contratos de empacotamento de fardos. Se definido como '-', serão aplicadas as recompensas do jogo base." />
+		<text name="cb_plowMissionReward_short" text="Recompensa por Contrato de Lavoura" />
+		<text name="cb_plowMissionReward_long" text="A recompensa por hectare para contratos de lavoura. Se definido como '-', serão aplicadas as recompensas do jogo base." />
+		<text name="cb_cultivateMissionReward_short" text="Recompensa por Contrato de Cultivo" />
+		<text name="cb_cultivateMissionReward_long" text="A recompensa por hectare para contratos de cultivo. Se definido como '-', serão aplicadas as recompensas do jogo base." />
+		<text name="cb_sowMissionReward_short" text="Recompensa por Contrato de Sementeira" />
+		<text name="cb_sowMissionReward_long" text="A recompensa por hectare para contratos de sementeira. Se definido como '-', serão aplicadas as recompensas do jogo base." />
+		<text name="cb_harvestMissionReward_short" text="Recompensa por Contrato de Colheita" />
+		<text name="cb_harvestMissionReward_long" text="A recompensa por hectare para contratos de colheita. Se definido como '-', serão aplicadas as recompensas do jogo base." />
+		<text name="cb_hoeMissionReward_short" text="Recompensa por Contrato de Mondagem" />
+		<text name="cb_hoeMissionReward_long" text="A recompensa por hectare para contratos de mondagem. Se definido como '-', serão aplicadas as recompensas do jogo base." />
+		<text name="cb_weedMissionReward_short" text="Recompensa por Contrato de Remoção de Ervas Daninhas" />
+		<text name="cb_weedMissionReward_long" text="A recompensa por hectare para contratos de remoção de ervas daninhas. Se definido como '-', serão aplicadas as recompensas do jogo base." />
+		<text name="cb_herbicideMissionReward_short" text="Recompensa por Contrato de Pulverização" />
+		<text name="cb_herbicideMissionReward_long" text="A recompensa por hectare para contratos de pulverização. Se definido como '-', serão aplicadas as recompensas do jogo base." />
+		<text name="cb_fertilizeMissionReward_short" text="Recompensa por Contrato de Fertilização" />
+		<text name="cb_fertilizeMissionReward_long" text="A recompensa por hectare para contratos de fertilização. Se definido como '-', serão aplicadas as recompensas do jogo base." />
+		<text name="cb_mowMissionReward_short" text="Recompensa por Contrato de Corte" />
+		<text name="cb_mowMissionReward_long" text="A recompensa por hectare para contratos de corte. Se definido como '-', serão aplicadas as recompensas do jogo base." />
+		<text name="cb_tedderMissionReward_short" text="Recompensa por Contrato de Enleiramento" />
+		<text name="cb_tedderMissionReward_long" text="A recompensa por hectare para contratos de enleiramento. Se definido como '-', serão aplicadas as recompensas do jogo base." />
+		<text name="cb_stonePickMissionReward_short" text="Recompensa por Contrato de Recolha de Pedras" />
+		<text name="cb_stonePickMissionReward_long" text="A recompensa por hectare para contratos de recolha de pedras. Se definido como '-', serão aplicadas as recompensas do jogo base." />
+		<text name="cb_deadwoodMissionReward_short" text="Recompensa por Contrato de Madeira Morta" />
+		<text name="cb_deadwoodMissionReward_long" text="A recompensa por árvore para contratos de madeira morta. Se definido como '-', serão aplicadas as recompensas do jogo base." />
+		<text name="cb_treeTransportMissionReward_short" text="Recompensa por Contrato de Transporte de Árvores" />
+		<text name="cb_treeTransportMissionReward_long" text="A recompensa por árvore para transporte de árvores. Se definido como '-', serão aplicadas as recompensas do jogo base." />
+		<text name="cb_destructibleRockMissionReward_short" text="Recompensa por Contrato de Remoção de Rochas" />
+		<text name="cb_destructibleRockMissionReward_long" text="A recompensa por rocha para contratos de remoção de rochas. Se definido como '-', serão aplicadas as recompensas do jogo base." />
+		
+		<text name="cb_baleMissionMaxPerType_short" text="Máximo de Contratos de Enfardamento" />
+		<text name="cb_baleMissionMaxPerType_long" text="O número máximo de contratos de enfardamento gerados. Se definido como '-', será aplicado o valor de 'Máximo de Contratos Por Tipo'. Para desativar este tipo de contrato, defina para 0." />
+		<text name="cb_baleWrapMissionMaxPerType_short" text="Máximo de Contratos de Enfardamento com Envolvimento" />
+		<text name="cb_baleWrapMissionMaxPerType_long" text="O número máximo de contratos de enfardamento com envolvimento gerados. Se definido como '-', será aplicado o valor de 'Máximo de Contratos Por Tipo'. Para desativar este tipo de contrato, defina para 0." />
+		<text name="cb_plowMissionMaxPerType_short" text="Máximo de Contratos de Lavragem" />
+		<text name="cb_plowMissionMaxPerType_long" text="O número máximo de contratos de lavragem gerados. Se definido como '-', será aplicado o valor de 'Máximo de Contratos Por Tipo'. Para desativar este tipo de contrato, defina para 0." />
+		<text name="cb_cultivateMissionMaxPerType_short" text="Máximo de Contratos de Cultivo" />
+		<text name="cb_cultivateMissionMaxPerType_long" text="O número máximo de contratos de cultivo gerados. Se definido como '-', será aplicado o valor de 'Máximo de Contratos Por Tipo'. Para desativar este tipo de contrato, defina para 0." />
+		<text name="cb_sowMissionMaxPerType_short" text="Máximo de Contratos de Sementeira" />
+		<text name="cb_sowMissionMaxPerType_long" text="O número máximo de contratos de sementeira gerados. Se definido como '-', será aplicado o valor de 'Máximo de Contratos Por Tipo'. Para desativar este tipo de contrato, defina para 0." />
+		<text name="cb_harvestMissionMaxPerType_short" text="Máximo de Contratos de Colheita" />
+		<text name="cb_harvestMissionMaxPerType_long" text="O número máximo de contratos de colheita gerados. Se definido como '-', será aplicado o valor de 'Máximo de Contratos Por Tipo'. Para desativar este tipo de contrato, defina para 0." />
+		<text name="cb_hoeMissionMaxPerType_short" text="Máximo de Contratos de Mondar" />
+		<text name="cb_hoeMissionMaxPerType_long" text="O número máximo de contratos de mondar gerados. Se definido como '-', será aplicado o valor de 'Máximo de Contratos Por Tipo'. Para desativar este tipo de contrato, defina para 0." />
+		<text name="cb_weedMissionMaxPerType_short" text="Máximo de Contratos de Remoção de Ervas Daninhas" />
+		<text name="cb_weedMissionMaxPerType_long" text="O número máximo de contratos de remoção de ervas daninhas gerados. Se definido como '-', será aplicado o valor de 'Máximo de Contratos Por Tipo'. Para desativar este tipo de contrato, defina para 0." />
+		<text name="cb_herbicideMissionMaxPerType_short" text="Máximo de Contratos de Pulverização" />
+		<text name="cb_herbicideMissionMaxPerType_long" text="O número máximo de contratos de pulverização gerados. Se definido como '-', será aplicado o valor de 'Máximo de Contratos Por Tipo'. Para desativar este tipo de contrato, defina para 0." />
+		<text name="cb_fertilizeMissionMaxPerType_short" text="Máximo de Contratos de Fertilização" />
+		<text name="cb_fertilizeMissionMaxPerType_long" text="O número máximo de contratos de fertilização gerados. Se definido como '-', será aplicado o valor de 'Máximo de Contratos Por Tipo'. Para desativar este tipo de contrato, defina para 0." />
+		<text name="cb_mowMissionMaxPerType_short" text="Máximo de Contratos de Corte de Relva" />
+		<text name="cb_mowMissionMaxPerType_long" text="O número máximo de contratos de corte de relva gerados. Se definido como '-', será aplicado o valor de 'Máximo de Contratos Por Tipo'. Para desativar este tipo de contrato, defina para 0." />
+		<text name="cb_tedderMissionMaxPerType_short" text="Máximo de Contratos de Viragem de Feno" />
+		<text name="cb_tedderMissionMaxPerType_long" text="O número máximo de contratos de viragem de feno gerados. Se definido como '-', será aplicado o valor de 'Máximo de Contratos Por Tipo'. Para desativar este tipo de contrato, defina para 0." />
+		<text name="cb_stonePickMissionMaxPerType_short" text="Máximo de Contratos de Recolha de Pedras" />
+		<text name="cb_stonePickMissionMaxPerType_long" text="O número máximo de contratos de recolha de pedras gerados. Se definido como '-', será aplicado o valor de 'Máximo de Contratos Por Tipo'. Para desativar este tipo de contrato, defina para 0." />
+		<text name="cb_deadwoodMissionMaxPerType_short" text="Máximo de Contratos de Madeira Morta" />
+		<text name="cb_deadwoodMissionMaxPerType_long" text="O número máximo de contratos de madeira morta gerados. Se definido como '-', será aplicado o valor de 'Máximo de Contratos Por Tipo'. Para desativar este tipo de contrato, defina para 0." />
+		<text name="cb_treeTransportMissionMaxPerType_short" text="Máximo de Contratos de Transporte de Árvores" />
+		<text name="cb_treeTransportMissionMaxPerType_long" text="O número máximo de contratos de transporte de árvores gerados. Se definido como '-', será aplicado o valor de 'Máximo de Contratos Por Tipo'. Para desativar este tipo de contrato, defina para 0." />
+		<text name="cb_destructibleRockMissionMaxPerType_short" text="Máximo de Contratos de Remoção de Rochas" />
+		<text name="cb_destructibleRockMissionMaxPerType_long" text="O número máximo de contratos de remoção de rochas gerados. Se definido como '-', será aplicado o valor de 'Máximo de Contratos Por Tipo'. Para desativar este tipo de contrato, defina para 0." />
+
+    </texts>
+</l10n>
