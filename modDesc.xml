@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <modDesc descVersion="94">
     <author>GMNGjoy</author>
-    <version>1.0.8.8</version>
+    <version>1.0.8.9</version>
     <title>
         <en>Contract Boost</en>
         <de>Auftragssteigerung</de>
@@ -38,7 +38,7 @@ Changelog 1.0.0.2
 - Added safety check for custom maps that don't contain every type of contract
 
 Changelog 1.1.0.0 (in development)
-- User contributed translations: fr, cz, it, pl, ru, da
+- User contributed translations: cz, da, fr, it, pl, ru
 - Allow collecting hay from tedding contracts.
 - Allow collecting straw bales from baling contracts.
 - Allow collecting wrapped silage bales from bale-wrapping contracts.
@@ -105,7 +105,7 @@ Changelog 1.0.0.2 :
 - Ajout d'une vérification de sécurité pour les cartes personnalisées ne contenant pas tous les types de contrats
 
 Changelog 1.1.0.0 :
-- Traductions ajoutées par la communauté : fr, cz, it, pl, ru
+- Traductions ajoutées par la communauté : cz, da, fr, it, pl, ru
 - Permet de collecter le foin lors des contrats de fanage
 - Permet de collecter des bottes de paille lors des contrats de mise en balles
 - Permet de collecter des bottes d'ensilage lors des contrats d'enrubannage
@@ -145,7 +145,7 @@ Changelog 1.0.0.2
 - Aggiunto controllo di sicurezza per le mappe personalizzate che non contengono tutti i tipi di contratti
 
 Changelog 1.1.0.0
-- Traduzioni contribuite dagli utenti: fr, cz, it, pl, ru
+- Traduzioni contribuite dagli utenti: cz, da, fr, it, pl, ru
 - Consente di raccogliere il fieno dai contratti di giratura
 - Consente di raccogliere balle di paglia dai contratti di pressatura
 - Consente di raccogliere balle di insilato avvolte dai contratti di avvolgimento delle balle

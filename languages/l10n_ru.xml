@@ -18,21 +18,21 @@
         <text name="cb_enableFieldworkToolFillItems_long" text="Добавить расходники при аренде оборудования для выполнения контрактов. Примечание: при завершении контракта неиспользованные расходники будут удалены." />
         <text name="cb_enableCollectingBalesFromMissions_short" text="Разрешить сбор тюков" />
         <text name="cb_enableCollectingBalesFromMissions_long" text="Разрешить сбор тюков в контрактах на тюкование и обмотку тюков. Примечание: если включено то, тюки останутся на поле после завершения контракта." />
-        <text name="cb_enableCustomGrassFieldsForMissions_short" text="Support Custom Grass Field Contracts" />
-        <text name="cb_enableCustomGrassFieldsForMissions_long" text="Enables custom or dynamically generated grass fields to work properly for all grass contracts. With this setting disabled, custom or generated grass fields will be subject to plowing or cultivating contracts, and will grow weeds." />
-        <text name="cb_preferStrawHarvestMissions_short" text="Prefer Harvest Contracts over Straw Baling" />
-        <text name="cb_preferStrawHarvestMissions_long" text="Adds a preference towards harvesting contracts over straw baling contracts for the same fields. This setting works best with a MaxPerType for Harvest Missions higher than normal." />
+        <text name="cb_enableCustomGrassFieldsForMissions_short" text="Поддержка пользовательских контрактов на поля с травой" />
+        <text name="cb_enableCustomGrassFieldsForMissions_long" text="Позволяет настраиваемым или динамически создаваемым газонным полям работать должным образом для всех контрактов на выращивание травы. Если этот параметр отключен, на пользовательские или созданные газонные поля будут распространяться контракты на вспашку или культивацию, и на них будут расти сорняки." />
+        <text name="cb_preferStrawHarvestMissions_short" text="Предпочитать контракты на сбор урожая тюкованию соломы" />
+        <text name="cb_preferStrawHarvestMissions_long" text="Для тех же полей предпочтение отдается контрактам на уборку урожая, а не контрактам на тюкование соломы. Эта настройка лучше всего работает при максимальном значении для каждого типа заданий на уборку урожая, превышающем норму." />
 
-        <text name="cb_enableHarvestContractNewCrops_short" text="Enable Spinach, Pea &amp; Green Bean Harvest Contracts" />
-        <text name="cb_enableHarvestContractNewCrops_long" text="Allows generation of harvest contracts for Spinach, Pea &amp; Green Bean fields. This setting only affects harvesting contracts." />
-        <text name="cb_enableHarvestContractPremiumCrops_short" text="Enable Carrot, Parsnip &amp; Red Beet Harvest Contracts" />
-        <text name="cb_enableHarvestContractPremiumCrops_long" text="Allows generation of harvest contracts for Carrot, Parsnip &amp; Red Beet fields. This setting only affects harvesting contracts." />
-        <text name="cb_enableHarvestContractRootCrops_short" text="Enable Potato &amp; Sugar Beet Harvest Contracts" />
-        <text name="cb_enableHarvestContractRootCrops_long" text="Allows generation of harvest contracts for Potato &amp; Sugar Beet fields. This setting only affects harvesting contracts." />
-        <text name="cb_enableHarvestContractSugarcane_short" text="Enable Sugarcane Harvest Contracts" />
-        <text name="cb_enableHarvestContractSugarcane_long" text="Allows generation of harvest contracts for Sugarcane fields. This setting only affects harvesting contracts." />
-        <text name="cb_enableHarvestContractCotton_short" text="Enable Cotton Harvest Contracts" />
-        <text name="cb_enableHarvestContractCotton_long" text="Allows generation of harvest contracts for Cotton fields. This setting only affects harvesting contracts." />
+        <text name="cb_enableHarvestContractNewCrops_short" text="Заключение контрактов на сбор урожая шпината, гороха и зеленой фасоли" />
+        <text name="cb_enableHarvestContractNewCrops_long" text="Позволяет создавать контракты на сбор урожая для полей со шпинатом, горохом и зеленой фасолью. Этот параметр влияет только на контракты на сбор урожая." />
+        <text name="cb_enableHarvestContractPremiumCrops_short" text="Заключение контрактов на сбор урожая моркови, пастернака и красной свеклы" />
+        <text name="cb_enableHarvestContractPremiumCrops_long" text="Позволяет создавать контракты на сбор урожая для полей моркови, пастернака и красной свеклы. Этот параметр влияет только на контракты на сбор урожая." />
+        <text name="cb_enableHarvestContractRootCrops_short" text="Заключение контрактов на сбор картофеля и сахарной свеклы" />
+        <text name="cb_enableHarvestContractRootCrops_long" text="Позволяет создавать контракты на сбор урожая для полей картофеля и сахарной свеклы. Этот параметр влияет только на контракты на сбор урожая." />
+        <text name="cb_enableHarvestContractSugarcane_short" text="Заключение контрактов на сбор урожая сахарного тростника" />
+        <text name="cb_enableHarvestContractSugarcane_long" text="Позволяет создавать контракты на сбор урожая для полей сахарного тростника. Этот параметр влияет только на контракты на сбор урожая." />
+        <text name="cb_enableHarvestContractCotton_short" text="Заключение контрактов на сбор хлопка" />
+        <text name="cb_enableHarvestContractCotton_long" text="Позволяет создавать контракты на сбор урожая для хлопковых полей. Этот параметр влияет только на контракты на сбор урожая." />
        
         <text name="cb_enableContractValueOverrides_short" text="Включить переопределение стоимости контракта" />
 		<text name="cb_enableContractValueOverrides_long" text="Позволяет переопределять значение настроек контрактной смстемы по умолчанию. Отключает следующие четыре настройки если отключено." />
