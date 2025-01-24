@@ -27,9 +27,9 @@
 
         <text name="cb_enableHarvestContractNewCrops_short" text="Spinat, Erbsen &amp; Grüne Bohnen Ernteaufträge" />
         <text name="cb_enableHarvestContractNewCrops_long" text="Erlaubt das Erzeugen von Ernteaufträge für Felder mit Spinat, Erbsen oder grünen Bohnen. Diese Einstellung beeinflusst nur Ernteaufträge." />
-        <text name="cb_enableHarvestContractPremiumCrops_short" text="Karotten, Pastinaken und Rote Beete Ernteaufträge" />
+        <text name="cb_enableHarvestContractPremiumCrops_short" text="Karotten, Pastinaken &amp; Rote Beete Ernteaufträge" />
         <text name="cb_enableHarvestContractPremiumCrops_long" text="Erlaubt das Erzeugen von Ernteaufträge für Felder mit Karotten, Pastinaken oder Rote Beete. Diese Einstellung beeinflusst nur Ernteaufträge." />
-        <text name="cb_enableHarvestContractRootCrops_short" text="Kartoffel und Zuckerrüben Ernteaufträge" />
+        <text name="cb_enableHarvestContractRootCrops_short" text="Kartoffel &amp; Zuckerrüben Ernteaufträge" />
         <text name="cb_enableHarvestContractRootCrops_long" text="Erlaubt das Erzeugen von Ernteaufträgen für Felder mit Kartoffeln oder Zuckerrüben. Diese Einstellung beeinflusst nur Ernteaufträge." />
         <text name="cb_enableHarvestContractSugarcane_short" text="Erlaube Zuckerrohr Ernteaufträge" />
         <text name="cb_enableHarvestContractSugarcane_long" text="Erlaubt das Erzeugen von Ernteaufträgen für Felder mit Zuckerrohr. Diese Einstellung beeinflusst nur Ernteaufträge." />
