@@ -33,7 +33,7 @@ All of the above settings can be modified in-game through the General Settings p
 NOTE: Setting changes that may affect the reward or number of missions may *not* affect any already generated contracts.
 
 GitHub link: https://github.com/GMNGjoy/FS25_ContractBoost
-sorry
+
 Changelog 1.0.0.2
 - Added safety check for custom maps that don't contain every type of contract
 
@@ -50,10 +50,10 @@ Changelog 1.1.0.0 (in development)
 - Added feature to "prefer" harvesting missions over baling missions as cereal-crop harvesting missions are less frequent due to the new straw baling missions.
 - Added feature to enable or disable certain types of harvesting contracts.
 - ContractBoost settings are now managed in-game: 
-   - All settings previously in the configuration file can be set in the General Settings panel in-game, and will be updated when saving your game.
-   - The new FS25_ContractBoost.xml configuration file in savegame folder should only be manually edited while game is not running.
-   - The old ContractBoost.xml configuration file in modSettings folder has been depreciated
-   - Settings have been rebuilt to support MP syncronization :: The server is the source of truth for settings, clients recieve settings on connect or change.
+-     All settings previously in the configuration file can be set in the General Settings panel in-game, and will be updated when saving your game.
+-     The new FS25_ContractBoost.xml configuration file in savegame folder should only be manually edited while game is not running.
+-     The old ContractBoost.xml configuration file in modSettings folder has been depreciated
+-     Settings have been rebuilt to support MP syncronization :: The server is the source of truth for settings, clients recieve settings on connect or change.
 ]]></en>
         <de><![CDATA[
 Hole mehr aus deinen Aufträgen heraus indem du mehr Geld bekommst und die Beute einsammeln kannst!
@@ -68,14 +68,39 @@ Features:
 - Ernteaufträge können auch mit Schwadmähern durchgeführt werden
 - Bei Ernteaufträgen kann das Stroh geborgen werden
 - Bei Mähaufträgen kann das Gras gesammelt werden
-- Bei Pflug-, Grubber- und Saatmissionen können Steine aufgesammelt werden
+- Bei Pflug-, Grubber- und Saataufträgen können Steine aufgesammelt werden
+- Bei Heuwendeaufträgen kann das Heu geborgen werden
+- Bei Ballenpressaufträgen können Strohballen geborgen werden
+- Bei Ballenwickelaufträgen können Silageballen geborgen werden
+- Bei Saataufträgen kann auch gegrubbert werden, falls man versehentlich etwas falsches gesät hat
+- Bei Ballenpressaufträgen ist das Schwaden erlaubt, damit man Helfer die Ballen pressen lassen kann
 
 All diese Einstellungen können über eine XML Datei unter FarmingSimulator2025/modSettings/ContractBoost.xml angepasst werden
+
+NOTE: Setting changes that may affect the reward or number of missions may *not* affect any already generated contracts.
 
 GitHub-Link: https://github.com/GMNGjoy/FS25_ContractBoost
 
 Changelog 1.0.0.2
 - Sicherheitsüberprüfung für Karten hinzugefügt, die nicht alle Vertragsarten unterstützen
+
+Changelog 1.1.0.0
+- Bereitgestellte Übersetzungen für cz, da, fr, it, pl, pt und ru hinzugefügt.
+- Bergen von Heuballen für Heuwendeaufträge hinzugefügt.
+- Bergen von Strohballen für Ballenpressaufträge hinzugefügt.
+- Bergen von Silageballen für Ballenwickelaufträge hinzugefügt.
+- Grubber für Saataufträge erlaubt, falls man etwas falsches gesät hat.
+- Schwader für Ballenpressaufträge erlaubt, damit Helfer Ballen pressen können.
+- Es ist nun möglich, für jeden Auftragstyp separat einzustellen, wie viele Aufträge man annehmen kann, mit der Möglichkeit, Aufträgsarten zu unterdrücken, die man nicht sehen möchte.
+- Funktion hinzugefügt, mit der man bereits hinzugefügte Verbrauchsgüter entfernen kann, wenn das Breitstellen von Verbrauchsgütern ausgeschaltet ist.
+- Funktion hinzugefügt, mit der man unerwünschte Auftragstypen unterdrücken kann wenn man die Anzahl Aufträge pro Typ verändert. Diese Einstellung wird beim Laden und Speichern angewendet.
+- Funktion hinzugefügt, durch die Ernteaufträge vor Ballenpressaufträgen bevorzugt werden, da Getreide-Erntemissionen sonst wegen den neuen Strohballenpressaufträgen weniger häufig vorkommen.
+- Funktion hinzugefügt, um bestimmte Arten von Ernteaufträgen zu aktivieren oder deaktivieren.
+- Die Einstellungen von Auftragssteigerung werden nun im Spiel verwaltet:
+-     Alle Einstellungen, die bisher in der Konfigurationsdatei waren, können nun in den allgemeinen Spieleinstellungen geändert werden und werden beim Speichern des Spiels mitgespeichert.
+-     Die neue FS25_ContractBoost.xml Konfigurationsdatei im Verzeichnis des Spielstands sollte nur manuell editiert werden, während das Spiel nicht läuft.
+-     Die alte ContractBoost.xml Konfigurationsdate im modSettings Ordner wird nicht länger verwendet.
+-     Einstellungen wurden angepasst, um Mehrspielersynchronisation zu unterstützen: Der Server ist die Quelle der Wahrheit für Einstellungen, die Clients erhalten Einstellungen beim Verbinden oder bei Änderungen.
 ]]></de>
         <fr><![CDATA[
 Augmentez vos revenus grâce à vos contrats et récupérez les ressources collectées !
