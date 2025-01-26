@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <modDesc descVersion="94">
     <author>GMNGjoy</author>
-    <version>1.0.8.10</version>
+    <version>1.0.9.0</version>
     <title>
         <en>Contract Boost</en>
         <de>Auftragssteigerung</de>
@@ -130,58 +130,23 @@ Changelog 1.0.0.2 :
 - Ajout d'une vérification de sécurité pour les cartes personnalisées ne contenant pas tous les types de contrats
 
 Changelog 1.1.0.0 :
-- Traductions ajoutées par la communauté : cz, da, fr, it, pl, pt, ru
+- Traductions ajoutées par la communauté : cz, da, fr, it, pl, pt, ru
 - Permet de collecter le foin lors des contrats de fanage
 - Permet de collecter des bottes de paille lors des contrats de mise en balles
 - Permet de collecter des bottes d'ensilage lors des contrats d'enrubannage
-- Support de la personnalisation du nombre de contrats pour chaque type individuellement, avec la possibilité de "désactiver" les types de contrats non souhaités
-- Tous les paramètres précédemment dans le fichier de configuration sont désormais accessibles via le panneau Paramètres généraux en jeu
-- Le fichier de configuration dans le dossier modSettings est obsolète
-- Nouveau fichier de configuration dans le dossier savegame, éditable uniquement hors jeu
-- Correction du paramètre des missions de balles pour qu'il soit défini par hectare au lieu de par balle.
-- Ajout d'un cultivateur aux missions d'ensemencement, au cas où vous feriez une erreur.
-- Correction d'un bug mineur lorsque le mode débogage est désactivé.
+- Ajout d'un cultivateur aux missions d'ensemencement, juste au cas où vous vous tromperiez
+- Ajout d'une faucheuse aux missions de mise en balles, afin que vous puissiez utiliser un ouvrier pour mettre en balles.
+- Ajout de la prise en charge de la personnalisation du nombre de contrats pour chaque type de contrat individuellement, avec la possibilité de « désactiver » les types de contrats que vous ne souhaitez pas voir.
+- Ajout d'une fonctionnalité permettant de supprimer les éléments de remplissage déjà ajoutés lorsque le paramètre enableFieldworkToolFillItems est désactivé
+- Ajout d'une fonctionnalité permettant de supprimer les contrats indésirables lorsque vous modifiez le paramètre customMaxPerType. Ce paramètre est exécuté à la fois lors du chargement et de la sauvegarde du jeu.
+- Ajout d'une fonctionnalité permettant de « préférer » les missions de récolte aux missions de mise en balles, car les missions de récolte de céréales sont moins fréquentes en raison des nouvelles missions de mise en balles de paille.
+- Ajout d'une fonctionnalité permettant d'activer ou de désactiver certains types de contrats de récolte.
+- Les paramètres de ContractBoost sont désormais gérés dans le jeu :
+-     Tous les paramètres précédemment présents dans le fichier de configuration peuvent être définis dans le panneau Paramètres généraux du jeu et seront mis à jour lors de la sauvegarde de votre partie.
+-     Le nouveau fichier de configuration FS25_ContractBoost.xml dans le dossier de sauvegarde ne doit être modifié manuellement que lorsque le jeu n'est pas en cours d'exécution.
+-     L'ancien fichier de configuration ContractBoost.xml dans le dossier modSettings a été déprécié
+-     Les paramètres ont été reconstruits pour prendre en charge la synchronisation MP :: Le serveur est la source de vérité pour les paramètres, les clients reçoivent les paramètres lors de la connexion ou du changement.
 ]]></fr>
-        <it><![CDATA[
-Aumenta i tuoi contratti guadagnando più soldi e raccogliendo i bottini!
-
-Caratteristiche:
-- 50% in più di profitto da ogni contratto
-- 10 contratti massimi
-- 5 contratti massimi per tipo per impostazione predefinita
-- Consente di impostare una quantità personalizzata per tipo di contratto
-- 50 contratti totali disponibili
-- L'attrezzatura a noleggio per i contratti include gratuitamente articoli per il lavoro sul campo per riempire i tuoi strumenti
-- Consente di utilizzare l'attrezzatura per la falciatura nei contratti di raccolta
-- Consente di raccogliere la paglia dai contratti di raccolta
-- Consente di raccogliere l'erba dai contratti di falciatura
-- Consente di raccogliere pietre dai contratti di aratura, coltivazione e semina
-- Consente di raccogliere il fieno dai contratti di giratura
-- Consente di raccogliere balle di paglia dai contratti di pressatura
-- Consente di raccogliere balle di insilato avvolte dai contratti di avvolgimento delle balle
-
-Tutte le impostazioni sopra elencate possono essere modificate in gioco tramite il pannello Impostazioni Generali.
-
-NOTA: Le modifiche alle impostazioni che possono influenzare la ricompensa o il numero di missioni *non* influenzeranno i contratti già generati.
-
-Link GitHub: https://github.com/GMNGjoy/FS25_ContractBoost
-
-Changelog 1.0.0.2
-- Aggiunto controllo di sicurezza per le mappe personalizzate che non contengono tutti i tipi di contratti
-
-Changelog 1.1.0.0
-- Traduzioni contribuite dagli utenti: cz, da, fr, it, pl, pt, ru
-- Consente di raccogliere il fieno dai contratti di giratura
-- Consente di raccogliere balle di paglia dai contratti di pressatura
-- Consente di raccogliere balle di insilato avvolte dai contratti di avvolgimento delle balle
-- Supporta la personalizzazione del numero di contratti per ciascun tipo di contratto individualmente, con la possibilità di "disattivare" i tipi di contratti che non desideri vedere.
-- Tutte le impostazioni precedentemente nel file di configurazione possono essere impostate nel pannello Impostazioni Generali in gioco.
-- Il file di configurazione nella cartella modSettings è deprecato
-- Nuovo file di configurazione nella cartella savegame modificabile solo mentre il gioco non è in esecuzione.
-- Corretto il parametro della missione delle balle in modo che sia perHa anziché perBale
-- Aggiunto coltivatore alle missioni di semina, nel caso facessi un errore
-- Corretto un bug minore quando la modalità debug è disattivata.
-]]></it>
     </description>
     <iconFilename>icon_contractBoost.png</iconFilename>
     <multiplayer supported="true"/>
