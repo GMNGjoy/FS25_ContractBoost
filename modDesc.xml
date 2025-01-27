@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <modDesc descVersion="94">
     <author>GMNGjoy</author>
-    <version>1.0.9.0</version>
+    <version>1.1.0.0</version>
     <title>
         <en>Contract Boost</en>
         <de>Auftragssteigerung</de>
@@ -37,7 +37,7 @@ GitHub link: https://github.com/GMNGjoy/FS25_ContractBoost
 Changelog 1.0.0.2
 - Added safety check for custom maps that don't contain every type of contract
 
-Changelog 1.1.0.0 (in development)
+Changelog 1.1.0.0
 - User contributed translations: cz, da, fr, it, pl, pt, ru
 - Allow collecting hay from tedding contracts.
 - Allow collecting straw bales from baling contracts.
@@ -130,22 +130,23 @@ Changelog 1.0.0.2 :
 - Ajout d'une vérification de sécurité pour les cartes personnalisées ne contenant pas tous les types de contrats
 
 Changelog 1.1.0.0 :
-- Traductions ajoutées par la communauté : cz, da, fr, it, pl, pt, ru
+- Traductions ajoutées par la communauté : cz, da, fr, it, pl, pt, ru
 - Permet de collecter le foin lors des contrats de fanage
 - Permet de collecter des bottes de paille lors des contrats de mise en balles
 - Permet de collecter des bottes d'ensilage lors des contrats d'enrubannage
-- Ajout d'un cultivateur aux missions d'ensemencement, juste au cas où vous vous tromperiez
-- Ajout d'une faucheuse aux missions de mise en balles, afin que vous puissiez utiliser un ouvrier pour mettre en balles.
-- Ajout de la prise en charge de la personnalisation du nombre de contrats pour chaque type de contrat individuellement, avec la possibilité de « désactiver » les types de contrats que vous ne souhaitez pas voir.
-- Ajout d'une fonctionnalité permettant de supprimer les éléments de remplissage déjà ajoutés lorsque le paramètre enableFieldworkToolFillItems est désactivé
-- Ajout d'une fonctionnalité permettant de supprimer les contrats indésirables lorsque vous modifiez le paramètre customMaxPerType. Ce paramètre est exécuté à la fois lors du chargement et de la sauvegarde du jeu.
-- Ajout d'une fonctionnalité permettant de « préférer » les missions de récolte aux missions de mise en balles, car les missions de récolte de céréales sont moins fréquentes en raison des nouvelles missions de mise en balles de paille.
-- Ajout d'une fonctionnalité permettant d'activer ou de désactiver certains types de contrats de récolte.
-- Les paramètres de ContractBoost sont désormais gérés dans le jeu :
--     Tous les paramètres précédemment présents dans le fichier de configuration peuvent être définis dans le panneau Paramètres généraux du jeu et seront mis à jour lors de la sauvegarde de votre partie.
--     Le nouveau fichier de configuration FS25_ContractBoost.xml dans le dossier de sauvegarde ne doit être modifié manuellement que lorsque le jeu n'est pas en cours d'exécution.
--     L'ancien fichier de configuration ContractBoost.xml dans le dossier modSettings a été déprécié
--     Les paramètres ont été reconstruits pour prendre en charge la synchronisation MP :: Le serveur est la source de vérité pour les paramètres, les clients reçoivent les paramètres lors de la connexion ou du changement.
+- Ajout d'un cultivateur aux missions de semis, en cas d'erreur.
+- Ajout d'un andaineur aux missions de pressage pour permettre l'utilisation d'un ouvrier pour presser les balles.
+- Ajout de la possibilité de personnaliser le nombre de contrats pour chaque type, avec la possibilité de "désactiver" les types de contrats non souhaités
+- Ajout d'une fonctionnalité permettant de retirer les ressources ajoutées automatiquement lorsque l'option "Ajouter des consommables pour remplir les outil" est désactivée.
+- Ajout d'une fonctionnalité permettant de supprimer les contrats indésirables lorsque le paramètre "customMaxPerType" est modifié (appliqué au chargement ou à la sauvegarde du jeu).
+- Possibilité d'activer la priorité aux missions de récolte par rapport aux missions de pressage, car les missions de récolte de céréales sont moins fréquentes en raison des nouvelles missions de pressage de paille.
+- Ajout d'une option pour activer ou désactiver certains types de contrats de récolte.
+- Gestion des paramètres de ContractBoost en jeu : 
+-     Tous les paramètres précédemment dans le fichier de configuration sont désormais accessibles via le panneau Paramètres généraux en jeu et seront sauvegardés automatiquement.
+-     L'ancien fichier ContractBoost.xml dans le dossier modSettings est obsolète.
+-     Le nouveau fichier de configuration FS25_ContractBoost.xml dans le dossier de sauvegarde doit être édité manuellement uniquement lorsque le jeu n'est pas en cours d'exécution.
+-     Les paramètres sont reconstruits pour prendre en charge la synchronisation multijoueur :
+-     Le serveur est la source principale des paramètres, les clients reçoivent les paramètres lors de leur connexion ou lorsqu'une modification est effectuée.
 ]]></fr>
     </description>
     <iconFilename>icon_contractBoost.png</iconFilename>

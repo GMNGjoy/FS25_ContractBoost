@@ -1,114 +1,117 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <l10n>
-    <translationContributors/>
+    <translationContributors>
+        <translationContributor>Maestro-Ralf</translationContributor>
+        <translationContributor>DayWalkerRUS</translationContributor>
+    </translationContributors>
     <texts>
         <text name="contract_boosted" text="Улучшение контрактов" />
 
-        <text name="cb_enableStrawFromHarvestMissions_short" text="Разрешить сбор соломы" />
-        <text name="cb_enableStrawFromHarvestMissions_long" text="Разрешить сбор соломы по контрактам на сбор урожая." />
-        <text name="cb_enableSwathingForHarvestMissions_short" text="Разрешить валкование культур" />
+        <text name="cb_enableStrawFromHarvestMissions_short" text="Разрешить сбор Соломы" />
+        <text name="cb_enableStrawFromHarvestMissions_long" text="Разрешить сбор соломы в контрактах на сбор урожая." />
+        <text name="cb_enableSwathingForHarvestMissions_short" text="Разрешить Валкование культур" />
         <text name="cb_enableSwathingForHarvestMissions_long" text="Разрешить валкование в контрактах на уборку урожая." />
-        <text name="cb_enableGrassFromMowingMissions_short" text="Разрешить сбор травы" />
+        <text name="cb_enableGrassFromMowingMissions_short" text="Разрешить сбор Травы" />
         <text name="cb_enableGrassFromMowingMissions_long" text="Разрешить сбор травы в контрактах на покос." />
-        <text name="cb_enableHayFromTedderMissions_short" text="Разрешить сбор сена" />
+        <text name="cb_enableHayFromTedderMissions_short" text="Разрешить сбор Сена" />
         <text name="cb_enableHayFromTedderMissions_long" text="Разрешить сбор сена в контрактах." />
-        <text name="cb_enableStonePickingFromMissions_short" text="Разрешить собирать камни" />
-        <text name="cb_enableStonePickingFromMissions_long" text="Разрешить сбор камней в контрактах на посев и обработку почвы." />
+        <text name="cb_enableStonePickingFromMissions_short" text="Разрешить сбор Камней" />
+        <text name="cb_enableStonePickingFromMissions_long" text="Разрешить сбор камней в контрактах на обработку почвы." />
         <text name="cb_enableFieldworkToolFillItems_short" text="Добавить расходники для выполнения контракта" />
-        <text name="cb_enableFieldworkToolFillItems_long" text="Добавить расходники при аренде оборудования для выполнения контрактов. Примечание: при завершении контракта неиспользованные расходники будут удалены." />
-        <text name="cb_enableCollectingBalesFromMissions_short" text="Разрешить сбор тюков" />
+        <text name="cb_enableFieldworkToolFillItems_long" text="Добавить расходные материалы при аренде оборудования для выполнения контракта. Примечание: по завершении контракта, неиспользованные расходные материалы будут удалены." />
+        <text name="cb_enableCollectingBalesFromMissions_short" text="Разрешить сбор Тюков" />
         <text name="cb_enableCollectingBalesFromMissions_long" text="Разрешить сбор тюков в контрактах на тюкование и обмотку тюков. Примечание: если включено то, тюки останутся на поле после завершения контракта." />
-        <text name="cb_enableCustomGrassFieldsForMissions_short" text="Поддержка пользовательских контрактов на поля с травой" />
-        <text name="cb_enableCustomGrassFieldsForMissions_long" text="Позволяет настраиваемым или динамически создаваемым газонным полям работать должным образом для всех контрактов на выращивание травы. Если этот параметр отключен, на пользовательские или созданные газонные поля будут распространяться контракты на вспашку или культивацию, и на них будут расти сорняки." />
-        <text name="cb_preferStrawHarvestMissions_short" text="Предпочитать контракты на сбор урожая тюкованию соломы" />
-        <text name="cb_preferStrawHarvestMissions_long" text="Для тех же полей предпочтение отдается контрактам на уборку урожая, а не контрактам на тюкование соломы. Эта настройка лучше всего работает при максимальном значении для каждого типа заданий на уборку урожая, превышающем норму." />
+        <text name="cb_enableCustomGrassFieldsForMissions_short" text="Поддержка пользовательских травяных полей" />
+        <text name="cb_enableCustomGrassFieldsForMissions_long" text="Позволяет пользовательским травяным полям корректно работать во всех контрактах на Траву. Если отключено, то травяные поля будут подвержены контрактам на вспашку или культивацию и на них будут расти сорняки." />
+        <text name="cb_preferStrawHarvestMissions_short" text="Предпочтение Уборки урожая вместо Сбора сена" />
+        <text name="cb_preferStrawHarvestMissions_long" text="Добавляет предпочтение контрактов на сбор урожая перед контрактами на прессование соломы для тех же полей. Эта настройка хорошо работает с параметром Максимум контрактов на Сбор урожая - выше обычного." />
 
-        <text name="cb_enableHarvestContractNewCrops_short" text="Заключение контрактов на сбор урожая шпината, гороха и зеленой фасоли" />
-        <text name="cb_enableHarvestContractNewCrops_long" text="Позволяет создавать контракты на сбор урожая для полей со шпинатом, горохом и зеленой фасолью. Этот параметр влияет только на контракты на сбор урожая." />
-        <text name="cb_enableHarvestContractPremiumCrops_short" text="Заключение контрактов на сбор урожая моркови, пастернака и красной свеклы" />
-        <text name="cb_enableHarvestContractPremiumCrops_long" text="Позволяет создавать контракты на сбор урожая для полей моркови, пастернака и красной свеклы. Этот параметр влияет только на контракты на сбор урожая." />
-        <text name="cb_enableHarvestContractRootCrops_short" text="Заключение контрактов на сбор картофеля и сахарной свеклы" />
-        <text name="cb_enableHarvestContractRootCrops_long" text="Позволяет создавать контракты на сбор урожая для полей картофеля и сахарной свеклы. Этот параметр влияет только на контракты на сбор урожая." />
-        <text name="cb_enableHarvestContractSugarcane_short" text="Заключение контрактов на сбор урожая сахарного тростника" />
-        <text name="cb_enableHarvestContractSugarcane_long" text="Позволяет создавать контракты на сбор урожая для полей сахарного тростника. Этот параметр влияет только на контракты на сбор урожая." />
-        <text name="cb_enableHarvestContractCotton_short" text="Заключение контрактов на сбор хлопка" />
-        <text name="cb_enableHarvestContractCotton_long" text="Позволяет создавать контракты на сбор урожая для хлопковых полей. Этот параметр влияет только на контракты на сбор урожая." />
-       
+        <text name="cb_enableHarvestContractNewCrops_short" text="Контракты на Шпинат, Горох и Зеленую фасоль" />
+        <text name="cb_enableHarvestContractNewCrops_long" text="Позволяет генерировать контракты на уборку Шпината, Гороха и Зеленой фасоли. Эта настройка влияет только на контракты на уборку урожая." />
+        <text name="cb_enableHarvestContractPremiumCrops_short" text="Контракты на Морковь, Пастернак и Красную свеклу" />
+        <text name="cb_enableHarvestContractPremiumCrops_long" text="Позволяет генерировать контракты на уборку Моркови, Пастернака и Красной свеклы. Эта настройка влияет только на контракты на уборку урожая." />
+        <text name="cb_enableHarvestContractRootCrops_short" text="Контракты на Картофель и Сахарную свеклу" />
+        <text name="cb_enableHarvestContractRootCrops_long" text="Позволяет генерировать контракты на уборку Картофеля и Сахарной свеклы. Эта настройка влияет только на контракты на уборку урожая." />
+        <text name="cb_enableHarvestContractSugarcane_short" text="Контракты на Сахарный тростник" />
+        <text name="cb_enableHarvestContractSugarcane_long" text="Позволяет генерировать контракты на уборку Сахарного тростника. Эта настройка влияет только на контракты на уборку урожая." />
+        <text name="cb_enableHarvestContractCotton_short" text="Контракты на Хлопок" />
+        <text name="cb_enableHarvestContractCotton_long" text="Позволяет генерировать контракты на уборку Хлопока. Эта настройка влияет только на контракты на уборку урожая." />
+
         <text name="cb_enableContractValueOverrides_short" text="Включить переопределение стоимости контракта" />
-		<text name="cb_enableContractValueOverrides_long" text="Позволяет переопределять значение настроек контрактной смстемы по умолчанию. Отключает следующие четыре настройки если отключено." />
-		<text name="cb_rewardFactor_short" text="Вознаграждение фактор" />
-        <text name="cb_rewardFactor_long" text="Умножает все вознаграждения по контрактам на заданный кофициент." />
-        <text name="cb_maxContractsPerFarm_short" text="Максимальное количество контрактов на ферму" />
-        <text name="cb_maxContractsPerFarm_long" text="Определяет максимальное количество контрактов, которые каждая ферма может иметь активными в любой момент времени.." />
-        <text name="cb_maxContractsOverall_short" text="Максимальное количесво доступных контрактов" />
-        <text name="cb_maxContractsOverall_long" text="Определяет максимальное количество контрактов, которые могут быть вам предложены." />
-        <text name="cb_maxContractsPerType_short" text="Максимум контрактов одного типа." />
-        <text name="cb_maxContractsPerType_long" text="Максимальное количество контрактов одного типа которые могут быть Вам предложены." />
+        <text name="cb_enableContractValueOverrides_long" text="Разрешает переопределять значения настроек по умолчанию контрактной системы. Отключает следующие четыре параметра, если установлено значение ОТКЛ." />
+        <text name="cb_rewardFactor_short" text="Коэффициент вознаграждения" />
+        <text name="cb_rewardFactor_long" text="Умножает все вознаграждения по контрактам на заданный коэффициент." />
+        <text name="cb_maxContractsPerFarm_short" text="Максимальное количество Активных контрактов" />
+        <text name="cb_maxContractsPerFarm_long" text="Определяет максимальное количество контрактов, которые могут быть АКТИВНЫ на каждой ферме в любой момент времени." />
+        <text name="cb_maxContractsOverall_short" text="Максимальное количество Доступных контрактов" />
+        <text name="cb_maxContractsOverall_long" text="Определяет максимальное количество контрактов, которые могут быть Вам ПРЕДЛОЖЕНЫ." />
+        <text name="cb_maxContractsPerType_short" text="Максимальное количество Контрактов каждого типа" />
+        <text name="cb_maxContractsPerType_long" text="Определяет максимальное количество контрактов ОДНОГО ТИПА, которые могут быть Вам предложены." />
 
-        <text name="cb_baleMissionReward_short" text="Награда за контракт на поставку тюков" />
-        <text name="cb_baleMissionReward_long" text="Награда за тюк для контрактов на тюкование. Если установлено '-', будут применены награды из базовой игры." />
-        <text name="cb_baleWrapMissionReward_short" text="Награда за контракт на упаковку тюков" />
-        <text name="cb_baleWrapMissionReward_long" text="Награда за тюк в контрактах на упаковку тюков. Если установлено '-', будут применены награды из базовой игры." />
-        <text name="cb_plowMissionReward_short" text="Награда за контракт на вспашку" />
-        <text name="cb_plowMissionReward_long" text="Вознаграждение за гектар в контрактах на вспашку. Если установлено '-', будут применены награды из базовой игры." />
-        <text name="cb_cultivateMissionReward_short" text="Награда за контракт на культивацию." />
-        <text name="cb_cultivateMissionReward_long" text="Вознаграждение за гектар в контрактах на культивацию. Если установлено '-', будут применены награды из базовой игры." />
-        <text name="cb_sowMissionReward_short" text="Награда за контракт на посев." />
-        <text name="cb_sowMissionReward_long" text="Вознаграждение за гектар в контрактах на посев. Если установлено '-', будут применены награды из базовой игры." />
-        <text name="cb_harvestMissionReward_short" text="Награда за контракт на сбор урожая" />
-        <text name="cb_harvestMissionReward_long" text="The за гектар вознаграждение в контрактах на сбор урожая. Если установлено '-', будут применены награды из базовой игры." />
-        <text name="cb_hoeMissionReward_short" text="Награда за контракт на прополку мотыгой." />
-        <text name="cb_hoeMissionReward_long" text="Вознаграждение за гектар в контрактах на прополку мотыгой. Если установлено '-', будут применены награды из базовой игры." />
-        <text name="cb_weedMissionReward_short" text="Награда за контракт на прополку полольником." />
-        <text name="cb_weedMissionReward_long" text="Вознаграждение за гектар в контрактах на прополку полольником. Если установлено '-', будут применены награды из базовой игры." />
-        <text name="cb_herbicideMissionReward_short" text="Награда за контракт на опрыскивание." />
-        <text name="cb_herbicideMissionReward_long" text="Вознаграждение за гектар в контрактах на опрыскивание. Если установлено '-', будут применены награды из базовой игры." />
-        <text name="cb_fertilizeMissionReward_short" text="Награда за контракт на удобрение." />
-        <text name="cb_fertilizeMissionReward_long" text="Вознаграждение за гектар в контрактах на удобрение. Если установлено '-', будут применены награды из базовой игры." />
-        <text name="cb_mowMissionReward_short" text="Награда за контракт на покос." />
-        <text name="cb_mowMissionReward_long" text="Вознаграждение за гектар в контрактах на покос. Если установлено '-', будут применены награды из базовой игры." />
-        <text name="cb_tedderMissionReward_short" text="Награда за контракт на ворошение." />
-        <text name="cb_tedderMissionReward_long" text="Вознаграждение за гектар в контрактах на ворошение. Если установлено '-', будут применены награды из базовой игры." />
-        <text name="cb_stonePickMissionReward_short" text="Награда за контракт на сбор камней." />
-        <text name="cb_stonePickMissionReward_long" text="Вознаграждение за гектар в контрактах на сбор камней. Если установлено '-', будут применены награды из базовой игры." />
-        <text name="cb_deadwoodMissionReward_short" text="Награда за контракт на сухостой." />
-        <text name="cb_deadwoodMissionReward_long" text="Вознаграждение за дерево в контрактах на сухостой. Если установлено '-', будут применены награды из базовой игры." />
-        <text name="cb_treeTransportMissionReward_short" text="Награда за контракт на перевозку леса." />
-        <text name="cb_treeTransportMissionReward_long" text="Вознаграждение за дерево в контрактах на перевозку леса. Если установлено '-', будут применены награды из базовой игры." />
-        <text name="cb_destructibleRockMissionReward_short" text="Награда за контракт на удаление камней." />
-        <text name="cb_destructibleRockMissionReward_long" text="Вознаграждение за камень в контрактах на удаление камней. Если установлено '-', будут применены награды из базовой игры." />        
+        <text name="cb_baleMissionReward_short" text="Вознаграждение за Тюкование" />
+        <text name="cb_baleMissionReward_long" text="Вознаграждение за гектар по контракту. Если установлено значение '-', будет применяться базовое игровое вознаграждение." />
+        <text name="cb_baleWrapMissionReward_short" text="Вознаграждение за Обмотку тюков" />
+        <text name="cb_baleWrapMissionReward_long" text="Вознаграждение за гектар по контракту. Если установлено значение '-', будет применяться базовое игровое вознаграждение." />
+        <text name="cb_plowMissionReward_short" text="Вознаграждение за Вспашку" />
+        <text name="cb_plowMissionReward_long" text="Вознаграждение за гектар по контракту. Если установлено значение '-', будет применяться базовое игровое вознаграждение." />
+        <text name="cb_cultivateMissionReward_short" text="Вознаграждение за Культивацию" />
+        <text name="cb_cultivateMissionReward_long" text="Вознаграждение за гектар по контракту. Если установлено значение '-', будет применяться базовое игровое вознаграждение." />
+        <text name="cb_sowMissionReward_short" text="Вознаграждение за Посев" />
+        <text name="cb_sowMissionReward_long" text="Вознаграждение за гектар по контракту. Если установлено значение '-', будет применяться базовое игровое вознаграждение." />
+        <text name="cb_harvestMissionReward_short" text="Вознаграждение за Сбор урожая" />
+        <text name="cb_harvestMissionReward_long" text="Вознаграждение за гектар по контракту. Если установлено значение '-', будет применяться базовое игровое вознаграждение." />
+        <text name="cb_hoeMissionReward_short" text="Вознаграждение за Рыхление мотыгой" />
+        <text name="cb_hoeMissionReward_long" text="Вознаграждение за гектар по контракту. Если установлено значение '-', будет применяться базовое игровое вознаграждение." />
+        <text name="cb_weedMissionReward_short" text="Вознаграждение за Прополку" />
+        <text name="cb_weedMissionReward_long" text="Вознаграждение за гектар по контракту. Если установлено значение '-', будет применяться базовое игровое вознаграждение." />
+        <text name="cb_herbicideMissionReward_short" text="Вознаграждение за Опрыскивание" />
+        <text name="cb_herbicideMissionReward_long" text="Вознаграждение за гектар по контракту. Если установлено значение '-', будет применяться базовое игровое вознаграждение." />
+        <text name="cb_fertilizeMissionReward_short" text="Вознаграждение за Внесение удобрений" />
+        <text name="cb_fertilizeMissionReward_long" text="Вознаграждение за гектар по контракту. Если установлено значение '-', будет применяться базовое игровое вознаграждение." />
+        <text name="cb_mowMissionReward_short" text="Вознаграждение за Покос" />
+        <text name="cb_mowMissionReward_long" text="Вознаграждение за гектар по контракту. Если установлено значение '-', будет применяться базовое игровое вознаграждение." />
+        <text name="cb_tedderMissionReward_short" text="Вознаграждение за Tedding" />
+        <text name="cb_tedderMissionReward_long" text="Вознаграждение за гектар по контракту. Если установлено значение '-', будет применяться базовое игровое вознаграждение." />
+        <text name="cb_stonePickMissionReward_short" text="Вознаграждение за Cбор камней с поля" />
+        <text name="cb_stonePickMissionReward_long" text="Вознаграждение за гектар по контракту. Если установлено значение '-', будет применяться базовое игровое вознаграждение." />
+        <text name="cb_deadwoodMissionReward_short" text="Вознаграждение за Сухостой" />
+        <text name="cb_deadwoodMissionReward_long" text="Вознаграждение за гектар по контракту. Если установлено значение '-', будет применяться базовое игровое вознаграждение." />
+        <text name="cb_treeTransportMissionReward_short" text="Вознаграждение за Транспортировку деревьев" />
+        <text name="cb_treeTransportMissionReward_long" text="Вознаграждение за гектар по контракту. Если установлено значение '-', будет применяться базовое игровое вознаграждение." />
+        <text name="cb_destructibleRockMissionReward_short" text="Вознаграждение за Уничтожение камней" />
+        <text name="cb_destructibleRockMissionReward_long" text="Вознаграждение за гектар по контракту. Если установлено значение '-', будет применяться базовое игровое вознаграждение." />
 
-        <text name="cb_baleMissionMaxPerType_short" text="Максимум контрактов на тюкование." />
-        <text name="cb_baleMissionMaxPerType_long" text="Максимальное количество сгенерированных контрактов на тюкование. Если установлено '-', то будет использовано значение 'Максимум контрактов одного типа'. Что бы отключить такой тип контрактов, установите значение 0." />
-        <text name="cb_baleWrapMissionMaxPerType_short" text="Максимум контрактов на обмотку тюков." />
-        <text name="cb_baleWrapMissionMaxPerType_long" text="Максимальное количество сгенерированных контрактов на обмотку тюков. Если установлено '-', то будет использовано значение 'Максимум контрактов одного типа'. Что бы отключить такой тип контрактов, установите значение 0." />
-        <text name="cb_plowMissionMaxPerType_short" text="Максимум контрактов на вспашку." />
-        <text name="cb_plowMissionMaxPerType_long" text="Максимальное количество сгенерированных контрактов на вспашку. Если установлено '-', то будет использовано значение 'Максимум контрактов одного типа'. Что бы отключить такой тип контрактов, установите значение 0." />
-        <text name="cb_cultivateMissionMaxPerType_short" text="Максимум контрактов на культивацию." />
-        <text name="cb_cultivateMissionMaxPerType_long" text="Максимальное количество сгенерированных контрактов на культивацию. Если установлено '-', то будет использовано значение 'Максимум контрактов одного типа'. Что бы отключить такой тип контрактов, установите значение 0." />
-        <text name="cb_sowMissionMaxPerType_short" text="Максимум контракт на посев." />
-        <text name="cb_sowMissionMaxPerType_long" text="Максимальное количество сгенерированных контрактов на посев. Если установлено '-', то будет использовано значение 'Максимум контрактов одного типа'. Что бы отключить такой тип контрактов, установите значение 0." />
-        <text name="cb_harvestMissionMaxPerType_short" text="Максимум контрактов на сбор урожая." />
-        <text name="cb_harvestMissionMaxPerType_long" text="Максимальное количество сгенерированных контрактов на сбор урожая. Если установлено '-', то будет использовано значение 'Максимум контрактов одного типа'. Что бы отключить такой тип контрактов, установите значение 0." />
-        <text name="cb_hoeMissionMaxPerType_short" text="Максимум контрактов на прополку мотыгой." />
-        <text name="cb_hoeMissionMaxPerType_long" text="Максимальное количество сгенерированных контрактов на прополку мотыгой. Если установлено '-', то будет использовано значение 'Максимум контрактов одного типа'. Что бы отключить такой тип контрактов, установите значение 0." />
-        <text name="cb_weedMissionMaxPerType_short" text="Максимум контрактов на прополку полольником." />
-        <text name="cb_weedMissionMaxPerType_long" text="Максимальное количество сгенерированных контрактов на прополку полольником. Если установлено '-', то будет использовано значение 'Максимум контрактов одного типа'. Что бы отключить такой тип контрактов, установите значение 0." />
-        <text name="cb_herbicideMissionMaxPerType_short" text="Максимум контрактов на опрыскивание." />
-        <text name="cb_herbicideMissionMaxPerType_long" text="Максимальное количество сгенерированных контрактов на опрыскивание. Если установлено '-', то будет использовано значение 'Максимум контрактов одного типа'. Что бы отключить такой тип контрактов, установите значение 0." />
-        <text name="cb_fertilizeMissionMaxPerType_short" text="Максимум контрактов на удобрение." />
-        <text name="cb_fertilizeMissionMaxPerType_long" text="Максимальное количество сгенерированных контрактов на удобрение. Если установлено '-', то будет использовано значение 'Максимум контрактов одного типа'. Что бы отключить такой тип контрактов, установите значение 0." />
-        <text name="cb_mowMissionMaxPerType_short" text="Максимум контрактов на покос." />
-        <text name="cb_mowMissionMaxPerType_long" text="Максимальное количество сгенерированных контрактов на покос. Если установлено '-', то будет использовано значение 'Максимум контрактов одного типа'. Что бы отключить такой тип контрактов, установите значение 0." />
-        <text name="cb_tedderMissionMaxPerType_short" text="Максимум контрактов на ворошение." />
-        <text name="cb_tedderMissionMaxPerType_long" text="Максимальное количество сгенерированных контрактов на ворошение. Если установлено '-', то будет использовано значение 'Максимум контрактов одного типа'. Что бы отключить такой тип контрактов, установите значение 0." />
-        <text name="cb_stonePickMissionMaxPerType_short" text="Максимум контракт на сбор камней." />
-        <text name="cb_stonePickMissionMaxPerType_long" text="Максимальное количество сгенерированных контрактов на сбор камней. Если установлено '-', то будет использовано значение 'Максимум контрактов одного типа'. Что бы отключить такой тип контрактов, установите значение 0." />
-        <text name="cb_deadwoodMissionMaxPerType_short" text="Максимум контрактов на сухостой." />
-        <text name="cb_deadwoodMissionMaxPerType_long" text="Максимальное количество сгенерированных контрактов на сухостой. Если установлено '-', то будет использовано значение 'Максимум контрактов одного типа'. Что бы отключить такой тип контрактов, установите значение 0." />
-        <text name="cb_treeTransportMissionMaxPerType_short" text="Максимум контрактов на перевозку леса." />
-        <text name="cb_treeTransportMissionMaxPerType_long" text="Максимальное количество сгенерированных контрактов на перевозку леса. Если установлено '-', то будет использовано значение 'Максимум контрактов одного типа'. Что бы отключить такой тип контрактов, установите значение 0." />
-        <text name="cb_destructibleRockMissionMaxPerType_short" text="Максимум контрактов на удаление камней" />
-        <text name="cb_destructibleRockMissionMaxPerType_long" text="Максимальное количество сгенерированных контрактов на на удаление камней. Если установлено '-', то будет использовано значение 'Максимум контрактов одного типа'. Что бы отключить такой тип контрактов, установите значение 0." />
+        <text name="cb_baleMissionMaxPerType_short" text="Максимум контрактов на Тюкование" />
+        <text name="cb_baleMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
+        <text name="cb_baleWrapMissionMaxPerType_short" text="Максимум контрактов на Обмотку тюков" />
+        <text name="cb_baleWrapMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
+        <text name="cb_plowMissionMaxPerType_short" text="Максимум контрактов на Вспашку" />
+        <text name="cb_plowMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
+        <text name="cb_cultivateMissionMaxPerType_short" text="Максимум контрактов на Культивацию" />
+        <text name="cb_cultivateMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
+        <text name="cb_sowMissionMaxPerType_short" text="Максимум контрактов на Посев" />
+        <text name="cb_sowMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
+        <text name="cb_harvestMissionMaxPerType_short" text="Максимум контрактов на Сбор урожая" />
+        <text name="cb_harvestMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
+        <text name="cb_hoeMissionMaxPerType_short" text="Максимум контрактов на Рыхление мотыгой" />
+        <text name="cb_hoeMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
+        <text name="cb_weedMissionMaxPerType_short" text="Максимум контрактов на Прополку" />
+        <text name="cb_weedMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
+        <text name="cb_herbicideMissionMaxPerType_short" text="Максимум контрактов на Опрыскивание" />
+        <text name="cb_herbicideMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
+        <text name="cb_fertilizeMissionMaxPerType_short" text="Максимум контрактов на Внесение удобрений" />
+        <text name="cb_fertilizeMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
+        <text name="cb_mowMissionMaxPerType_short" text="Максимум контрактов на Покос" />
+        <text name="cb_mowMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
+        <text name="cb_tedderMissionMaxPerType_short" text="Максимум контрактов на Tedding" />
+        <text name="cb_tedderMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
+        <text name="cb_stonePickMissionMaxPerType_short" text="Максимум контрактов на Cбор камней с поля" />
+        <text name="cb_stonePickMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
+        <text name="cb_deadwoodMissionMaxPerType_short" text="Максимум контрактов на Сухостой" />
+        <text name="cb_deadwoodMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
+        <text name="cb_treeTransportMissionMaxPerType_short" text="Максимум контрактов на Транспортировку деревьев" />
+        <text name="cb_treeTransportMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
+        <text name="cb_destructibleRockMissionMaxPerType_short" text="Максимум контрактов на Уничтожение камней" />
+        <text name="cb_destructibleRockMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
     </texts>
 </l10n>
