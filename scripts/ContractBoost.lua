@@ -135,7 +135,7 @@ end)
 
 
 ---Save the config when the savegame is being saved
-FSBaseMission.saveSavegame = Utils.appendedFunction(FSBaseMission.saveSavegame,  function(...)
+ItemSystem.saveSavegame = Utils.prependedFunction(ItemSystem.saveSavegame,  function(...)
     ContractBoost.settings:saveSettings()
     MissionBalance:applyMaxPerType()
 end)
