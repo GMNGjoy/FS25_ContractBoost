@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<modDesc descVersion="94">
+<modDesc descVersion="95">
     <author>GMNGjoy</author>
-    <version>1.1.0.0</version>
+    <version>1.0.9.3</version>
     <title>
         <en>Contract Boost</en>
         <de>Auftragssteigerung</de>
@@ -53,7 +53,7 @@ Changelog 1.1.0.0
 -     All settings previously in the configuration file can be set in the General Settings panel in-game, and will be updated when saving your game.
 -     The new FS25_ContractBoost.xml configuration file in savegame folder should only be manually edited while game is not running.
 -     The old ContractBoost.xml configuration file in modSettings folder has been depreciated
--     Settings have been rebuilt to support MP syncronization :: The server is the source of truth for settings, clients recieve settings on connect or change.
+-     Settings have been rebuilt to support MP synchronization :: The server is the source of truth for settings, clients receive settings on connect or change.
 ]]></en>
         <de><![CDATA[
 Hole mehr aus deinen Aufträgen heraus indem du mehr Geld bekommst und die Beute einsammeln kannst!

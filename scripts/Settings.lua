@@ -8,11 +8,16 @@ local Settings_mt = Class(Settings)
 function Settings.new()
     local self = setmetatable({}, Settings_mt)
     self.debugMode = SettingsManager.defaultConfig.debugMode
+    self.enableInGameSettingsMenu = SettingsManager.defaultConfig.enableInGameSettingsMenu
+
+    -- set via in-gmae menu
+    self.enableContractValueOverrides = SettingsManager.defaultConfig.enableContractValueOverrides
     self.rewardFactor = SettingsManager.defaultConfig.rewardFactor
     self.maxContractsPerFarm = SettingsManager.defaultConfig.maxContractsPerFarm
     self.maxContractsPerType = SettingsManager.defaultConfig.maxContractsPerType
-    self.maxContractsOverall = SettingsManager.defaultConfig.maxContractsOverall
-    self.enableContractValueOverrides = SettingsManager.defaultConfig.enableContractValueOverrides
+    self.maxContractsOverall = SettingsManager.defaultConfig.maxContractsOverall   
+
+    -- boolean settings 
     self.enableStrawFromHarvestMissions = SettingsManager.defaultConfig.enableStrawFromHarvestMissions
     self.enableSwathingForHarvestMissions = SettingsManager.defaultConfig.enableSwathingForHarvestMissions
     self.enableGrassFromMowingMissions = SettingsManager.defaultConfig.enableGrassFromMowingMissions
@@ -20,8 +25,17 @@ function Settings.new()
     self.enableStonePickingFromMissions = SettingsManager.defaultConfig.enableStonePickingFromMissions
     self.enableFieldworkToolFillItems = SettingsManager.defaultConfig.enableFieldworkToolFillItems
     self.enableCollectingBalesFromMissions = SettingsManager.defaultConfig.enableCollectingBalesFromMissions
+    self.enableCustomGrassFieldsForMissions = SettingsManager.defaultConfig.enableCustomGrassFieldsForMissions
     self.preferStrawHarvestMissions = SettingsManager.defaultConfig.preferStrawHarvestMissions
-    self.enableInGameSettingsMenu = SettingsManager.defaultConfig.enableInGameSettingsMenu
+
+    -- harvest settings
+    self.enableHarvestContractNewCrops = SettingsManager.defaultConfig.enableHarvestContractNewCrops
+    self.enableHarvestContractPremiumCrops = SettingsManager.defaultConfig.enableHarvestContractPremiumCrops
+    self.enableHarvestContractRootCrops = SettingsManager.defaultConfig.enableHarvestContractRootCrops
+    self.enableHarvestContractSugarcane = SettingsManager.defaultConfig.enableHarvestContractSugarcane
+    self.enableHarvestContractCotton = SettingsManager.defaultConfig.enableHarvestContractCotton
+
+    -- customizing
     self.customRewards = SettingsManager.defaultConfig.customRewards
     self.customMaxPerType = SettingsManager.defaultConfig.customMaxPerType
 
@@ -181,7 +195,7 @@ function Settings:onWriteStream(streamId, connection)
     streamWriteBool(streamId, self.enableFieldworkToolFillItems)
     streamWriteBool(streamId, self.enableCustomGrassFieldsForMissions)
     streamWriteBool(streamId, self.preferStrawHarvestMissions)
-    
+
     -- harvest settings
     streamWriteBool(streamId, self.enableHarvestContractNewCrops)
     streamWriteBool(streamId, self.enableHarvestContractPremiumCrops)
