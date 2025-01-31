@@ -135,7 +135,7 @@ end)
 
 
 ---Save the config when the savegame is being saved
-ItemSystem.saveSavegame = Utils.prependedFunction(ItemSystem.saveSavegame,  function(...)
+ItemSystem.save = Utils.prependedFunction(ItemSystem.save,  function(...)
     ContractBoost.settings:saveSettings()
     MissionBalance:applyMaxPerType()
 end)

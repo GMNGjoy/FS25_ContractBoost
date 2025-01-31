@@ -35,7 +35,7 @@ SettingsManager.missionTypes = {
     "destructibleRockMission"
 }
 SettingsManager.defaultConfig = {
-    debugMode = true,
+    debugMode = false,
     enableInGameSettingsMenu = true,
     enableContractValueOverrides = true,
     rewardFactor = 1.5,
