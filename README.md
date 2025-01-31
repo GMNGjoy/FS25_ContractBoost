@@ -151,6 +151,32 @@ This set of boolean (`true|false`) settings stop new harvest contracts from bein
 This boolean (`true|false`) setting (default `true`) will prevent straw baling contracts from being created on fields with the growth stage of `harvestReady`, or any earlier growth stage, indirectly allowing those fields to be available for harvesting contracts. Having this setting on will still allow grass baling missions, and will still allow straw baling missions on harvested fields (which is a base game "feature"), but the overall number of baling missions will appear to be very limted as the setting prefers harvesting over baling. NOTE: this will also affect fields that are enabled for straw that don't typically drop straw, when used alongside the Extended Straw Crops mod.
 
 
+### Detailed explanation `tempsavegame` &amp; FS25 `1.5.0` patch changed how saving works
+The FS25 `1.5.0` patch changed the way that savegames work, specifically for multiplayer - this means that when **Contract Boost** saves it's data into the savegame  folder, it saves into a `tempsavegame` folder instead of the correct numbered `savegame##` folder that you would expect. This is the new way that Giants is saving the game data, and _NOT A BUG_, as long as you are on the _FS25_ContractBoost@1.0.9.4_ or higher version.
+
+old way:
+- hit save
+- every player is locked from doing anything while the save is in progress
+- savegame## folder contents are backed up, then the contents are deleted
+- save process recreates every file in the folder
+- once the save is complete, players are allowed to move and resume play
+
+the downside of this way is obviously the amount of time that the save takes to perform, and the fact that the save takes more time the more items that are on the map, or the larger the map.
+
+new way (with 1.5, the way I understand it)
+- hit save
+- temporary folder `tempsavegame` is created
+- save process saves the state of the game into the temp folder
+- once the "tempsave" is "ready" players are locked for a short time
+- existing save is backed up
+- contents of new `tempsavegame` folder are copied into existing savegame folder overwriting or replacing the existing files
+- players are allowed to move and resume play.
+
+the biggest noticeable difference here is the amount time the players who are connected stay "locked" which is MINISCULE compared to the old way, and alleviates many of the player-sync issues that arose during this time. This also alleviates problems where if the game or server crashes during the save (after the old save was deleted and the new data is created) then you'd have a "corrupt save". the new way doesn't completely protect against that, but it minimizes the impact.
+
+`tempsavegame` is not a bug, but how the game saves now. **This is the way.**
+
+
 ## Detailed Configuration Instructions (pre `1.0.3.0`)
 
 **Contract Boost** is entirely controlled by a named configuration file (`ContractBoost.xml`) that is copied into your `modSettings/` folder on first usage. The file is located in the same folder that your `savegame##` folder is located, roughly here:
