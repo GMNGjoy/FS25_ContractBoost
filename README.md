@@ -62,8 +62,8 @@ _Enjoy!_
 ### Changelog `1.0.0.2`
 - Added safety check for custom maps that don't contain every type of contract
 
-### Changelog `1.1.0.0` _(still in development)_
-- User contributed translations: `cz`, `da`, `fr`, `it`, `pl`, `pt`, `ru`
+### Changelog `1.1.0.0`
+- User contributed translations: `cz`, `da`, `es`, `fr`, `it`, `pl`, `pt`, `ru`
 - Allow collecting hay from tedding contracts
 - Allow collecting straw bales from baling contracts
 - Allow collecting wrapped silage bales from bale-wrapping contracts

@@ -38,7 +38,7 @@ Changelog 1.0.0.2
 - Added safety check for custom maps that don't contain every type of contract
 
 Changelog 1.1.0.0
-- User contributed translations: cz, da, fr, it, pl, pt, ru
+- User contributed translations: cz, da, es, fr, it, pl, pt, ru
 - Allow collecting hay from tedding contracts.
 - Allow collecting straw bales from baling contracts.
 - Allow collecting wrapped silage bales from bale-wrapping contracts.
@@ -85,7 +85,7 @@ Changelog 1.0.0.2
 - Sicherheitsüberprüfung für Karten hinzugefügt, die nicht alle Vertragsarten unterstützen
 
 Changelog 1.1.0.0
-- Bereitgestellte Übersetzungen für cz, da, fr, it, pl, pt und ru hinzugefügt.
+- Bereitgestellte Übersetzungen für cz, da, es, fr, it, pl, pt und ru hinzugefügt.
 - Bergen von Heuballen für Heuwendeaufträge hinzugefügt.
 - Bergen von Strohballen für Ballenpressaufträge hinzugefügt.
 - Bergen von Silageballen für Ballenwickelaufträge hinzugefügt.
@@ -130,7 +130,7 @@ Changelog 1.0.0.2 :
 - Ajout d'une vérification de sécurité pour les cartes personnalisées ne contenant pas tous les types de contrats
 
 Changelog 1.1.0.0 :
-- Traductions ajoutées par la communauté : cz, da, fr, it, pl, pt, ru
+- Traductions ajoutées par la communauté : cz, da, es, fr, it, pl, pt, ru
 - Permet de collecter le foin lors des contrats de fanage
 - Permet de collecter des bottes de paille lors des contrats de mise en balles
 - Permet de collecter des bottes d'ensilage lors des contrats d'enrubannage
