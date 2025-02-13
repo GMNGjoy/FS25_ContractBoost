@@ -15,7 +15,7 @@
         <text name="cb_enableHayFromTedderMissions_short" text="Heu sammeln" />
         <text name="cb_enableHayFromTedderMissions_long" text="Erlaubt das Bergen von Heu bei Mäh-Aufträgen." />
         <text name="cb_enableStonePickingFromMissions_short" text="Steine sammeln" />
-        <text name="cb_enableStonePickingFromMissions_long" text="Erlaubt das Bergen von Steinen bei Grubber- und Sä-Aufträgen." />
+        <text name="cb_enableStonePickingFromMissions_long" text="Erlaubt das Bergen von Steinen bei Grubber- und Säh-Aufträgen." />
         <text name="cb_enableFieldworkToolFillItems_short" text="Verbrauchsgüter" />
         <text name="cb_enableFieldworkToolFillItems_long" text="Fügt dem Leasing-Equipment kostenlose Verbrauchsgüter hinzu. Achtung: Nicht benutzte Verbrauchsgüter werden bei Vertragsende entfernt." />
         <text name="cb_enableCollectingBalesFromMissions_short" text="Ballen sammeln" />
@@ -23,7 +23,7 @@
         <text name="cb_enableCustomGrassFieldsForMissions_short" text="Aufträge auf selbst definierten Grasfeldern" />
         <text name="cb_enableCustomGrassFieldsForMissions_long" text="Erlaubt alle passenden Missionen für Grasfelder, die selbst definiert oder dynamisch generiert wurden. Wenn dies ausgeschaltet wird, können für selbst definierte oder dynamisch generierte Grasfelder Pflug- und Grubberaufträge generiert werden, und es wird Unkraut wachsen." />
         <text name="cb_preferStrawHarvestMissions_short" text="Ernteaufträge vor Strohballenpressaufträgen bevorzugen" />
-        <text name="cb_preferStrawHarvestMissions_long" text="Macht Ernteaufträge wahrscheinlicher und Strohballenpressaufträge unwahrscheinlicher auf den gleichen Feldern. Diese EInstellung wirkt am Besten wenn die maximale Anzahl an Ernteaaufträgen höher eingestellt ist als normal." />
+        <text name="cb_preferStrawHarvestMissions_long" text="Macht Ernteaufträge wahrscheinlicher und Strohballenpressaufträge unwahrscheinlicher auf den gleichen Feldern. Diese Einstellung wirkt am Besten wenn die maximale Anzahl an Ernteaaufträgen höher eingestellt ist als normal." />
 
         <text name="cb_enableHarvestContractNewCrops_short" text="Spinat, Erbsen &amp; Grüne Bohnen Ernteaufträge" />
         <text name="cb_enableHarvestContractNewCrops_long" text="Erlaubt das Erzeugen von Ernteaufträge für Felder mit Spinat, Erbsen oder grünen Bohnen. Diese Einstellung beeinflusst nur Ernteaufträge." />
