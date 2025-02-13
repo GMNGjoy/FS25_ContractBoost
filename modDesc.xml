@@ -49,6 +49,7 @@ Changelog 1.1.0.0
 - Added feature to remove unwanted contracts when you change the customMaxPerType setting. This setting is executed both on game load and save.
 - Added feature to "prefer" harvesting missions over baling missions as cereal-crop harvesting missions are less frequent due to the new straw baling missions.
 - Added feature to enable or disable certain types of harvesting contracts.
+- Added console command to toggle ContractBoost debug: cbDebugToggle
 - ContractBoost settings are now managed in-game: 
 -     All settings previously in the configuration file can be set in the General Settings panel in-game, and will be updated when saving your game.
 -     The new FS25_ContractBoost.xml configuration file in savegame folder should only be manually edited while game is not running.
