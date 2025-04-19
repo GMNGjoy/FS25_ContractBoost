@@ -196,7 +196,7 @@ function SettingsUI:onSettingsChange(control)
     local subTable = setting.parent.subTable or nil
     -- local newValue = setting.texts[setting.state]
 
-    Logging.info(MOD_NAME .. ':SETTINGSUI  %s', control.subTable or nil)
+    Logging.info(MOD_NAME .. ':SETTINGSUI %s%s', control.subTable and control.subTabe.."." or "", control.name)
 
     -- publish the settings change to the object, which publishes to the server.
     g_currentMission.contractBoostSettings:onSettingsChange(control.name, subTable)

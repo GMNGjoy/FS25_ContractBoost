@@ -10,8 +10,10 @@ MissionBalance.boosted = {}
 
 --- Initialize the mission setting overrides based on user configuration
 function MissionBalance:setMissionSettings()
-    MissionManager.MAX_MISSIONS = g_currentMission.contractBoostSettings.maxContractsOverall
-    MissionManager.MAX_MISSIONS_PER_FARM = g_currentMission.contractBoostSettings.maxContractsPerFarm
+    if g_currentMission.contractBoostSettings.enableContractValueOverrides then
+        MissionManager.MAX_MISSIONS = g_currentMission.contractBoostSettings.maxContractsOverall
+        MissionManager.MAX_MISSIONS_PER_FARM = g_currentMission.contractBoostSettings.maxContractsPerFarm
+    end
     MissionManager.MISSION_GENERATION_INTERVAL = 180000 --360000
 
     if ContractBoost.debug then Logging.info(MOD_NAME..':BALANCE :: settings updated.') end
@@ -25,17 +27,19 @@ function MissionBalance:getDetails(superFunc)
     -- Load the default details from AbstractMission
     local details = superFunc(self)
 
-    -- The mission knows what the missionTypeId is
-    local missionTypeId = self.type.typeId
+    if g_currentMission.contractBoostSettings.enableContractValueOverrides then
+        -- The mission knows what the missionTypeId is
+        local missionTypeId = self.type.typeId
 
-    -- if we've stored the boosted amount, add it to the details.
-    if rawget(MissionBalance.boosted, missionTypeId) ~= nil then
-        local boostAmount = MissionBalance.boosted[missionTypeId]
-        local isPositive = boostAmount > 0 and '+' or ''
-        table.insert(details,  {
-            title = g_i18n:getText("contract_boosted"),
-            value = string.format("%s%d %%", isPositive, boostAmount)
-        })
+        -- if we've stored the boosted amount, add it to the details.
+        if rawget(MissionBalance.boosted, missionTypeId) ~= nil then
+            local boostAmount = MissionBalance.boosted[missionTypeId]
+            local isPositive = boostAmount > 0 and '+' or ''
+            table.insert(details,  {
+                title = g_i18n:getText("contract_boosted"),
+                value = string.format("%s%d %%", isPositive, boostAmount)
+            })
+        end
     end
 
     return details
@@ -46,6 +50,12 @@ end
 function MissionBalance:scaleMissionReward()
     local boostSettings = g_currentMission.contractBoostSettings
     local rewardFactor = boostSettings.rewardFactor
+    
+    -- reset the rewardFactor to 1 when overrides are off
+    if not boostSettings.enableContractValueOverrides then
+        rewardFactor = 1
+        boostSettings.customRewards = {}
+    end
 
     -- assume giants can't store floating point numbers.
     rewardFactor = math.round(rewardFactor * 10) / 10

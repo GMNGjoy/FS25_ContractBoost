@@ -50,7 +50,8 @@ end
 ---@param settingParent string|nil @The name of the setting, in dot notation for nested settings
 function Settings:onSettingsChange(settingName,settingParent)
     local name = self:cleanSettingName(settingName, settingParent)
-    if self.debugMode then Logging.info(MOD_NAME .. ":SETTINGS :: settingChanged %s%s", settingParent and settingParent..".", name) end
+    local newValue = self:getSetting(settingName, settingParent)
+    if self.debugMode then Logging.info(MOD_NAME .. ":SETTINGS :: settingChanged %s%s:%s", settingParent and settingParent.."." or "", name, newValue) end
     self:publishNewSettings()
     ContractBoost:syncSettings()
 end
@@ -61,12 +62,14 @@ end
 ---@return string|boolean @The current value of the requested setting
 function Settings:getSetting(settingName, settingParent)
     local name = self:cleanSettingName(settingName, settingParent)
-    if self.debugMode then Logging.info(MOD_NAME .. ":SETTINGS :: settingChanged %s%s", settingParent and settingParent..".", name) end
+    local newValue
     if settingParent then
-        return self[settingParent][name]
+        newValue = self[settingParent][name]
     else
-        return self[name]
+        newValue = self[name]
     end
+    if self.debugMode then Logging.info(MOD_NAME .. ":SETTINGS :: getSetting %s%s:%s", settingParent and settingParent.."." or "", name, newValue) end
+    return newValue
 end
 
 ---Retrieves the all settings at once

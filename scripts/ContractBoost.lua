@@ -39,13 +39,8 @@ function ContractBoost:syncSettings()
     if ContractBoost.debug then Logging.info(MOD_NAME..' :: syncSettings') end
 
     -- MissionBalance: on map load apply new mission settings
-    if g_currentMission.contractBoostSettings.enableContractValueOverrides then
-        MissionBalance:setMissionSettings()
-        MissionBalance:scaleMissionReward()
-    end
-
-    -- apply the max per type settings to remove any overflow based on new settings.
-    -- MissionBalance:applyMaxPerType()
+    MissionBalance:setMissionSettings()
+    MissionBalance:scaleMissionReward()
 
     -- MissionBorrow: on map load add items for fieldwork tools
     if g_currentMission.contractBoostSettings.enableFieldworkToolFillItems then
@@ -84,6 +79,7 @@ function ContractBoost.initializeListeners()
     BaleWrapMission.finishField = Utils.overwrittenFunction(BaleWrapMission.finishField, MissionTools.finishBaleWrapField)
 
     -- Make sure to show the details when someone looks at a mission
+
     AbstractMission.getDetails = Utils.overwrittenFunction(AbstractMission.getDetails, MissionBalance.getDetails)
 
     -- Allow users to disable certain harvest missions

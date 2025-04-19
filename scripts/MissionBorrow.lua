@@ -135,8 +135,12 @@ function MissionBorrow:removeFillItemsToMissionTools()
         if g_missionManager.missionVehicles[fillMissionType] ~= nil then
             for size, vehicles in pairs(g_missionManager.missionVehicles[fillMissionType]) do
                 for v, vehicle in pairs(vehicles) do
-                    for v2, spawnVehicle in pairs(vehicle.vehicles) do
-                        if spawnVehicle.filename == self.palletFilenames.fertilizeMission or spawnVehicle.filename == self.palletFilenames.herbicideMission or spawnVehicle.filename == self.palletFilenames.sowMission then
+                    -- since we're removing items from the table, we have to iterate from the end of the table.
+                    for v2 = #vehicle.vehicles, 1, -1 do
+                        local spawnVehicle = vehicle.vehicles[v2]
+                        if spawnVehicle.filename == self.palletFilenames.fertilizeMission 
+                            or spawnVehicle.filename == self.palletFilenames.herbicideMission 
+                            or spawnVehicle.filename == self.palletFilenames.sowMission then
                             table.remove(vehicle.vehicles, v2)
                         end
                     end
