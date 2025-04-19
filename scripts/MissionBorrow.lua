@@ -54,7 +54,8 @@ end
 function MissionBorrow:addFillItemsToMissionTools()
     if ContractBoost.debug then Logging.info(MOD_NAME..':BORROW :: addFillItemsToMissionTools') end
 
-    if self.fillItemsAdded then
+    if self:checkForFillItemsToMissionTools() then
+        if ContractBoost.debug then Logging.info(MOD_NAME..':BORROW :: addFillItemsToMissionTools exit, already added') end
         return
     end
 
@@ -92,7 +93,7 @@ function MissionBorrow:addFillItemsToMissionTools()
                                 filename = self.palletFilenames[fillMissionType]
                             })
                         end
-                
+
                     elseif fillMissionType == 'sowMission' then
 
                         table.insert(vehicle.vehicles, {
@@ -116,20 +117,36 @@ function MissionBorrow:addFillItemsToMissionTools()
         end
     end
 
-    -- prevent from being added again
-    self.fillItemsAdded = true
-
     if ContractBoost.debug then Logging.info(MOD_NAME..':BORROW :: addFillItemsToMissionTools complete') end
 end
 
 
+function MissionBorrow:checkForFillItemsToMissionTools()
+    if ContractBoost.debug then Logging.info(MOD_NAME..':BORROW :: checkForFillItemsToMissionTools') end
+
+    for _, fillMissionType in pairs(self.fillMissionTypes) do
+        if g_missionManager.missionVehicles[fillMissionType] ~= nil then
+            for size, vehicles in pairs(g_missionManager.missionVehicles[fillMissionType]) do
+                for v, vehicle in pairs(vehicles) do
+                    for v2, spawnVehicle in pairs(vehicle.vehicles) do
+                        if spawnVehicle.filename == self.palletFilenames.fertilizeMission 
+                            or spawnVehicle.filename == self.palletFilenames.herbicideMission 
+                            or spawnVehicle.filename == self.palletFilenames.sowMission then
+                                return true
+                        end
+                    end
+                end
+            end
+        end
+    end
+
+    if ContractBoost.debug then Logging.info(MOD_NAME..':BORROW :: checkForFillItemsToMissionTools not found') end
+
+    return false
+end
 
 function MissionBorrow:removeFillItemsToMissionTools()
     if ContractBoost.debug then Logging.info(MOD_NAME..':BORROW :: removeFillItemsToMissionTools') end
-
-    if not self.fillItemsAdded then
-        return
-    end
 
     for _, fillMissionType in pairs(self.fillMissionTypes) do
         if g_missionManager.missionVehicles[fillMissionType] ~= nil then
@@ -148,9 +165,6 @@ function MissionBorrow:removeFillItemsToMissionTools()
             end
         end
     end
-
-    -- prevent from being added again
-    self.fillItemsAdded = false
 
     if ContractBoost.debug then Logging.info(MOD_NAME..':BORROW :: removeFillItemsToMissionTools complete') end
 end

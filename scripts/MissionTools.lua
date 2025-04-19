@@ -32,6 +32,11 @@ WorkAreaTypes = {
     AUXILIARY = 25,
 }
 
+WorkAreaNames = {}
+for type, id in pairs(WorkAreaTypes) do
+    WorkAreaNames[id] = type
+end
+
 MissionTools = {}
 MissionTools.additionalAllowedVehicles = {}
 
@@ -107,17 +112,31 @@ function MissionTools:setupAdditionalAllowedVehicles()
     -- stonePickMission = {},
     -- deadwoodMission = {},
     -- treeTransportMission = {},
-    -- destructibleRockMission = {},d
+    -- destructibleRockMission = {},
+end
+
+function MissionTools:getMissionByFarmlandId(curentFarmlandId)
+	for _, mission in g_missionManager.missions do
+		if mission.activeMissionId and mission.field and mission.field.farmland.id == curentFarmlandId then
+		    return mission
+		end
+	end
+	return nil
 end
 
 -- replace the getIsMissionWorkAllowed with our own function that also checks the additional tools
 function MissionTools:getIsMissionWorkAllowed(superFunc, farmId, x, z, workAreaType)
-    local mission = self:getMissionAtWorldPosition(x, z)
+    local farmlandId = g_farmlandManager:getFarmlandIdAtWorldPosition(x, z)
+    local mission = MissionTools:getMissionByFarmlandId(farmlandId)
+    if ContractBoost.debug and mission ~= nil then 
+        printf(MOD_NAME..':MissionTools :: getMissionByFarmlandId %s: %s | farmId: %s', mission.id, mission.title, mission.farmId)
+    end
+
     if mission ~= nil and mission.type ~= nil and mission.farmId == farmId then
         local missionType = mission.type.name
 
         -- if ContractBoost.debug then 
-        --     printf(MOD_NAME..':MissionTools :: missionType: %s | workAreaType: %s', missionType, workAreaType)
+        --     printf(MOD_NAME..':MissionTools :: missionType: %s | workAreaType: %s', missionType, WorkAreaNames[workAreaType])
         -- end
 
         local missionWorkAreaTypes = mission.workAreaTypes or {}
