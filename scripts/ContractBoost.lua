@@ -22,12 +22,6 @@ function ContractBoost:init()
 
     Logging.info(MOD_NAME..' :: LOADED. debug: %s', ContractBoost.debug and "on" or "off")
 
-    -- Setup the UIHelper & settings
-    if g_currentMission.contractBoostSettings.enableInGameSettingsMenu then
-        ContractBoost.uiSettings = SettingsUI.new()
-        ContractBoost.uiSettings:injectUiSettings(g_currentMission.contractBoostSettings)
-    end
-
     ContractBoost.initializeListeners()
 
     Logging.info(MOD_NAME..' :: INIT complete')
@@ -55,7 +49,25 @@ function ContractBoost:syncSettings()
     -- Update skip harvest fruit types when settings change
     MissionFields:setupSkipHarvestFruitTypes()
 
+    -- Setup the UIHelper & settings
+    ContractBoost:syncUISettings()
+
     if ContractBoost.debug then Logging.info(MOD_NAME..' :: syncSettings complete.') end
+end
+
+---Activates individual settings across the mod.
+function ContractBoost:syncUISettings()
+    if ContractBoost.debug then Logging.info(MOD_NAME..' :: syncUISettings') end
+
+    -- Setup the UIHelper & settings
+    if not ContractBoost.uiSettings
+        and (g_currentMission:getIsServer() or g_currentMission.isMasterUser)
+        and g_currentMission.contractBoostSettings.enableInGameSettingsMenu then
+        ContractBoost.uiSettings = SettingsUI.new()
+        ContractBoost.uiSettings:injectUiSettings(g_currentMission.contractBoostSettings)
+    end
+
+    if ContractBoost.debug then Logging.info(MOD_NAME..' :: syncUISettings complete.') end
 end
 
 
@@ -85,6 +97,9 @@ function ContractBoost.initializeListeners()
     -- Allow users to disable certain harvest missions
     HarvestMission.isAvailableForField = Utils.overwrittenFunction(HarvestMission.isAvailableForField, MissionFields.isHarvestAvailableForField)
 
+    -- When the player logs in as admin, make sure the admin settings are there.
+    InGameMenu.updateHasMasterRights = Utils.appendedFunction(InGameMenu.updateHasMasterRights, ContractBoost.syncUISettings)
+
     -- once the player is loaded, parse through the generated missions
     if g_currentMission:getIsServer() then
         Player.onStartMission = Utils.appendedFunction(Player.onStartMission, function(...)
@@ -95,6 +110,9 @@ function ContractBoost.initializeListeners()
 
     -- add a console command to toggle debug mode.
     addConsoleCommand("cbDebugToggle", "Toggles the debug mode within the Contract Boost mod", "consoleCommandToggleDebugMode", ContractBoost)
+
+    -- add a console command to toggle debug mode.
+    addConsoleCommand("cbSettings", "Shows current settings in the log", "consoleCommandSettings", ContractBoost)
 end
 
 
@@ -103,6 +121,12 @@ function ContractBoost.consoleCommandToggleDebugMode()
     ContractBoost.debug = g_currentMission.contractBoostSettings.debugMode
     Logging.info(MOD_NAME..' :: debugMode set %s', g_currentMission.contractBoostSettings.debugMode and "On" or "Off")
 end
+
+function ContractBoost.consoleCommandSettings()
+    Logging.info(MOD_NAME..' :: Current Settings')
+    SettingsManager.logBoostSettings(g_currentMission.contractBoostSettings, 1)
+end
+
 
 ---Creates a settings object which can be accessed from the UI and the rest of the code
 ---@param   mission     table   @The object which is later available as g_currentMission

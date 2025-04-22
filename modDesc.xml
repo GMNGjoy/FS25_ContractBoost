@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <modDesc descVersion="97">
     <author>GMNGjoy</author>
-    <version>1.1.2.0</version>
+    <version>1.1.2.7</version>
     <title>
         <en>Contract Boost</en>
         <de>Auftragssteigerung</de>
         <fr>Contrat Amélioré</fr>
     </title>
     <description>
-        <en><![CDATA[
+        <en>
 Boost your contracts by making more money, and allowing collection of the spoils!
 
 Features:
@@ -55,8 +55,8 @@ Changelog 1.1.0.0
 -     The new FS25_ContractBoost.xml configuration file in savegame folder should only be manually edited while game is not running.
 -     The old ContractBoost.xml configuration file in modSettings folder has been depreciated
 -     Settings have been rebuilt to support MP synchronization :: The server is the source of truth for settings, clients receive settings on connect or change.
-]]></en>
-        <de><![CDATA[
+</en>
+        <de>
 Hole mehr aus deinen Aufträgen heraus indem du mehr Geld bekommst und die Beute einsammeln kannst!
 
 Features:
@@ -102,8 +102,8 @@ Changelog 1.1.0.0
 -     Die neue FS25_ContractBoost.xml Konfigurationsdatei im Verzeichnis des Spielstands sollte nur manuell editiert werden, während das Spiel nicht läuft.
 -     Die alte ContractBoost.xml Konfigurationsdate im modSettings Ordner wird nicht länger verwendet.
 -     Einstellungen wurden angepasst, um Mehrspielersynchronisation zu unterstützen: Der Server ist die Quelle der Wahrheit für Einstellungen, die Clients erhalten Einstellungen beim Verbinden oder bei Änderungen.
-]]></de>
-        <fr><![CDATA[
+</de>
+        <fr>
 Augmentez vos revenus grâce à vos contrats et récupérez les ressources collectées !
 
 Fonctionnalités :
@@ -148,7 +148,7 @@ Changelog 1.1.0.0 :
 -     Le nouveau fichier de configuration FS25_ContractBoost.xml dans le dossier de sauvegarde doit être édité manuellement uniquement lorsque le jeu n'est pas en cours d'exécution.
 -     Les paramètres sont reconstruits pour prendre en charge la synchronisation multijoueur :
 -     Le serveur est la source principale des paramètres, les clients reçoivent les paramètres lors de leur connexion ou lorsqu'une modification est effectuée.
-]]></fr>
+</fr>
     </description>
     <iconFilename>icon_contractBoost.png</iconFilename>
     <multiplayer supported="true"/>

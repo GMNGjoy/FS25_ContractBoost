@@ -186,17 +186,18 @@ function SettingsUI:injectUiSettings(loadedConfig)
     InGameMenuSettingsFrame.onFrameOpen = Utils.appendedFunction(InGameMenuSettingsFrame.onFrameOpen, function()
         self:updateUiElements(true) -- We can skip autobind controls here since they are already registered to onFrameOpen
     end)
+    Logging.info(MOD_NAME .. ':SETTINGSUI UI Injected')
 end
 
 function SettingsUI:onSettingsChange(control)
     self:updateUiElements()
 
     -- Grab the setting and new value from the UI element
-    local setting = control.elements[1]
+    local setting = control.elements[1]w
     local subTable = setting.parent.subTable or nil
-    -- local newValue = setting.texts[setting.state]
+    local newValue = setting.texts[setting.state]
 
-    Logging.info(MOD_NAME .. ':SETTINGSUI %s%s', control.subTable and control.subTabe.."." or "", control.name)
+    Logging.info(MOD_NAME .. ':SETTINGSUI Update Setting: %s%s = %s', subTable and subTable.."." or "", control.name, newValue)
 
     -- publish the settings change to the object, which publishes to the server.
     g_currentMission.contractBoostSettings:onSettingsChange(control.name, subTable)
