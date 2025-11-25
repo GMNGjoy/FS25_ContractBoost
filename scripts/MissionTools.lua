@@ -30,6 +30,7 @@ WorkAreaTypes = {
     WINDROWER = 23,
     DEFAULT = 24,
     AUXILIARY = 25,
+    PELLETIZER = 26,
 }
 
 WorkAreaNames = {}
@@ -48,7 +49,8 @@ function MissionTools:setupAdditionalAllowedVehicles()
             [WorkAreaTypes.FORAGEWAGON] = true,
             [WorkAreaTypes.BALER] = true,
             [WorkAreaTypes.WINDROWER] = true,
-            [WorkAreaTypes.WEEDER] = true
+            [WorkAreaTypes.WEEDER] = true,
+            [WorkAreaTypes.PELLETIZER] = true,
         }
     end
 
@@ -66,7 +68,8 @@ function MissionTools:setupAdditionalAllowedVehicles()
             [WorkAreaTypes.FORAGEWAGON] = true,
             [WorkAreaTypes.BALER] = true,
             [WorkAreaTypes.WINDROWER] = true,
-            [WorkAreaTypes.TEDDER] = true
+            [WorkAreaTypes.TEDDER] = true,
+            [WorkAreaTypes.PELLETIZER] = true,
         }
     end
 
@@ -86,7 +89,8 @@ function MissionTools:setupAdditionalAllowedVehicles()
         MissionTools.additionalAllowedVehicles.tedderMission = {
             [WorkAreaTypes.FORAGEWAGON] = true,
             [WorkAreaTypes.BALER] = true,
-            [WorkAreaTypes.WINDROWER] = true
+            [WorkAreaTypes.WINDROWER] = true,
+            [WorkAreaTypes.PELLETIZER] = true,
         }
     end
 
@@ -128,14 +132,14 @@ end
 function MissionTools:getIsMissionWorkAllowed(superFunc, farmId, x, z, workAreaType)
     local farmlandId = g_farmlandManager:getFarmlandIdAtWorldPosition(x, z)
     local mission = MissionTools:getMissionByFarmlandId(farmlandId)
-    if ContractBoost.debug and mission ~= nil then 
+    if ContractBoost.debug and mission ~= nil then
         printf(MOD_NAME..':MissionTools :: getMissionByFarmlandId %s: %s | farmId: %s', mission.id, mission.title, mission.farmId)
     end
 
     if mission ~= nil and mission.type ~= nil and mission.farmId == farmId then
         local missionType = mission.type.name
 
-        -- if ContractBoost.debug then 
+        -- if ContractBoost.debug then
         --     printf(MOD_NAME..':MissionTools :: missionType: %s | workAreaType: %s', missionType, WorkAreaNames[workAreaType])
         -- end
 
