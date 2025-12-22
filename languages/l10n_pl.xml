@@ -53,8 +53,8 @@
         <text name="cb_baleWrapMissionReward_long" text="Nagroda za belę w kontraktach na owijanie bel. Jeśli ustawione na '-', zastosowane zostaną nagrody z gry podstawowej."/>
         <text name="cb_plowMissionReward_short" text="Nagroda za kontrakt na orkę"/>
         <text name="cb_plowMissionReward_long" text="Nagroda za hektar w kontraktach na orkę. Jeśli ustawione na '-', zastosowane zostaną nagrody z gry podstawowej."/>
-        <text name="cb_cultivateMissionReward_short" text="&quot;Nagroda za kontrakt na kultywowanie"/>
-        <text name="cb_cultivateMissionReward_long" text="Nagroda za hektar w kontraktach na kultywowanie. Jeśli ustawione na '-', zastosowane zostaną nagrody z gry podstawowej."/>
+        <text name="cb_cultivateMissionReward_short" text="Nagroda za kontrakt na kultywatorowanie"/>
+        <text name="cb_cultivateMissionReward_long" text="Nagroda za hektar w kontraktach na kultywatorowanie. Jeśli ustawione na '-', zastosowane zostaną nagrody z gry podstawowej."/>
         <text name="cb_sowMissionReward_short" text="Nagroda za kontrakt na zasiew"/>
         <text name="cb_sowMissionReward_long" text="Nagroda za hektar w kontraktach na zasiew. Jeśli ustawione na '-', zastosowane zostaną nagrody z gry podstawowej."/>
         <text name="cb_harvestMissionReward_short" text="Nagroda za kontrakt na zbiór plonów"/>
@@ -86,8 +86,8 @@
         <text name="cb_baleWrapMissionMaxPerType_long" text="Maksymalna liczba generowanych kontraktów na owijanie bel. Jeśli ustawione na '-', zastosowana zostanie wartość 'Maksymalna liczba kontraktów na typ'. Aby wyłączyć ten typ kontraktu, ustaw na 0."/>
         <text name="cb_plowMissionMaxPerType_short" text="Maksymalna liczba kontraktów na orkę"/>
         <text name="cb_plowMissionMaxPerType_long" text="Maksymalna liczba generowanych kontraktów na orkę. Jeśli ustawione na '-', zastosowana zostanie wartość 'Maksymalna liczba kontraktów na typ'. Aby wyłączyć ten typ kontraktu, ustaw na 0."/>
-        <text name="cb_cultivateMissionMaxPerType_short" text="Maksymalna liczba kontraktów na kultywowanie"/>
-        <text name="cb_cultivateMissionMaxPerType_long" text="Maksymalna liczba generowanych kontraktów na kultywowanie. Jeśli ustawione na '-', zastosowana zostanie wartość 'Maksymalna liczba kontraktów na typ'. Aby wyłączyć ten typ kontraktu, ustaw na 0."/>
+        <text name="cb_cultivateMissionMaxPerType_short" text="Maksymalna liczba kontraktów na kultywatorowanie"/>
+        <text name="cb_cultivateMissionMaxPerType_long" text="Maksymalna liczba generowanych kontraktów na kultywatorowanie. Jeśli ustawione na '-', zastosowana zostanie wartość 'Maksymalna liczba kontraktów na typ'. Aby wyłączyć ten typ kontraktu, ustaw na 0."/>
         <text name="cb_sowMissionMaxPerType_short" text="Maksymalna liczba kontraktów na zasiew"/>
         <text name="cb_sowMissionMaxPerType_long" text="Maksymalna liczba generowanych kontraktów na zasiew. Jeśli ustawione na '-', zastosowana zostanie wartość 'Maksymalna liczba kontraktów na typ'. Aby wyłączyć ten typ kontraktu, ustaw na 0."/>
         <text name="cb_harvestMissionMaxPerType_short" text="Maksymalna liczba kontraktów na zbiór plonów"/>
