@@ -112,5 +112,6 @@
         <text name="cb_treeTransportMissionMaxPerType_long" text="Número máximo de transporte de madera generados. Si se establece en '-', se aplicará el valor 'Máximo de contratos por tipo'. Para deshabilitar este tipo de contrato, configúrelo en 0." />
         <text name="cb_destructibleRockMissionMaxPerType_short" text="Contratos de eliminación de rocas máximo" />
         <text name="cb_destructibleRockMissionMaxPerType_long" text="Número máximo de contratos de eliminación de rocas generados. Si se establece en '-', se aplicará el valor 'Máximo de contratos por tipo'. Para deshabilitar este tipo de contrato, configúrelo en 0." />
+        <text name="input_CONTRACT_BOOST_OPEN_CONTRACTS" text="Abrir el menú de contratos" />
     </texts>
 </l10n>

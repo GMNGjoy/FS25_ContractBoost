@@ -112,5 +112,6 @@
         <text name="cb_treeTransportMissionMaxPerType_long" text="Nejvyšší počet zakázek na přepravu kmenů. Pokud necháte nastaveno '-', bude aplikován počet pro daný typ zakázky, nastavený výše. Pro vypnutí těchto zakázek nastavte na 0." />
         <text name="cb_destructibleRockMissionMaxPerType_short" text="Maximum zakázek na odstraňování velkých kamenů" />
         <text name="cb_destructibleRockMissionMaxPerType_long" text="Nejvyšší počet zakázek na odstraňování velkých kamenů. Pokud necháte nastaveno '-', bude aplikován počet pro daný typ zakázky, nastavený výše. Pro vypnutí těchto zakázek nastavte na 0." />
+        <text name="input_CONTRACT_BOOST_OPEN_CONTRACTS" text="Otevřít nabídku zakázek" />
     </texts>
 </l10n>

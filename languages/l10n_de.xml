@@ -112,5 +112,6 @@
         <text name="cb_treeTransportMissionMaxPerType_long" text="Maximalzahl angebotener Holztransport-Aufträge. '-' setzt den Wert aus 'Maximale Aufträge pro Typ' weiter oben. '0' verhindert die Generierung dieser Auftragsart." />
         <text name="cb_destructibleRockMissionMaxPerType_short" text="Max Aufträge Felsen entfernen" />
         <text name="cb_destructibleRockMissionMaxPerType_long" text="Maximalzahl angebotener Felsentfernen-Aufträge. '-' setzt den Wert aus 'Maximale Aufträge pro Typ' weiter oben. '0' verhindert die Generierung dieser Auftragsart." />
+        <text name="input_CONTRACT_BOOST_OPEN_CONTRACTS" text="Auftragsmenü öffnen" />
     </texts>
 </l10n>

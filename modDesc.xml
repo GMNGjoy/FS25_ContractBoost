@@ -165,4 +165,12 @@ Changelog 1.1.0.0 :
         <sourceFile filename="scripts/lib/UIHelper.lua"/>
     </extraSourceFiles>
     <l10n filenamePrefix="languages/l10n"/>
+    <actions>
+        <action name="CONTRACT_BOOST_OPEN_CONTRACTS"/>
+    </actions>
+    <inputBinding>
+        <actionBinding action="CONTRACT_BOOST_OPEN_CONTRACTS">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_lshift KEY_r"/>
+        </actionBinding>
+    </inputBinding>
 </modDesc>

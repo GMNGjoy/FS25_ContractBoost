@@ -113,5 +113,6 @@
 		<text name="cb_destructibleRockMissionMaxPerType_short" text="Máximo de Contratos de Remoção de Rochas" />
 		<text name="cb_destructibleRockMissionMaxPerType_long" text="O número máximo de contratos de remoção de rochas gerados. Se definido como '-', será aplicado o valor de 'Máximo de Contratos Por Tipo'. Para desativar este tipo de contrato, defina para 0." />
 
+        <text name="input_CONTRACT_BOOST_OPEN_CONTRACTS" text="Abrir o menu de contratos" />
     </texts>
 </l10n>

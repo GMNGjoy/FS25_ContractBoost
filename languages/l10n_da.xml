@@ -110,5 +110,6 @@
         <text name="cb_treeTransportMissionMaxPerType_long" text="Maximum antal af genereret træ transport. Hvis sat til '-', værdien 'Maximum Kontrakter Per Type' vil blive anvendt. For at deaktivere denne type kontrakt skal du indstille til 0." />
         <text name="cb_destructibleRockMissionMaxPerType_short" text="Maximum Sten Fjernelse Kontrakter" />
         <text name="cb_destructibleRockMissionMaxPerType_long" text="Maximum antal af genereret sten fjernelse kontrakter. Hvis sat til '-', værdien 'Maximum Kontrakter Per Type' vil blive anvendt. For at deaktivere denne type kontrakt skal du indstille til 0." />
+        <text name="input_CONTRACT_BOOST_OPEN_CONTRACTS" text="Åbn kontraktmenuen" />
     </texts>
 </l10n>

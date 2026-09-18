@@ -159,3 +159,31 @@ ItemSystem.save = Utils.prependedFunction(ItemSystem.save,  function(...)
     ContractBoost.settings:saveSettings()
     MissionBalance:applyMaxPerType()
 end)
+
+
+---Opens the in-game menu directly on the contracts page
+function ContractBoost.openContractsMenu()
+    local inGameMenu = g_inGameMenu or g_gui.screenControllers[InGameMenu]
+    if inGameMenu == nil or inGameMenu.pageContracts == nil then
+        Logging.warning(MOD_NAME..' :: openContractsMenu: contracts page not found')
+        return
+    end
+
+    g_gui:showGui("InGameMenu")
+    inGameMenu:changeScreen(InGameMenu)
+    local index = inGameMenu.pagingElement:getPageMappingIndexByElement(inGameMenu.pageContracts)
+    if index ~= nil then
+        inGameMenu.pageSelector:setState(index, true)
+    end
+end
+
+
+---Register the global hotkey that opens the contracts menu (bound to Shift+R by default)
+local function addPlayerActionEvents(self, superFunc, ...)
+    superFunc(self, ...)
+    local _, eventId = g_inputBinding:registerActionEvent(InputAction.CONTRACT_BOOST_OPEN_CONTRACTS, ContractBoost, ContractBoost.openContractsMenu, false, true, false, true)
+    if eventId ~= nil then
+        g_inputBinding:setActionEventTextVisibility(eventId, false)
+    end
+end
+PlayerInputComponent.registerGlobalPlayerActionEvents = Utils.overwrittenFunction(PlayerInputComponent.registerGlobalPlayerActionEvents, addPlayerActionEvents)

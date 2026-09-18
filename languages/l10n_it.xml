@@ -111,5 +111,6 @@
         <text name="cb_treeTransportMissionMaxPerType_long" text="Il numero massimo di contratti di trasporto alberi generati. Se impostato su '-', verrà applicato il valore 'Max. Contratti per Tipo'. Per disabilitare questo tipo di contratto, impostare a 0." />
         <text name="cb_destructibleRockMissionMaxPerType_short" text="Max. Contratti di Rimozione Rocce" />
         <text name="cb_destructibleRockMissionMaxPerType_long" text="Il numero massimo di contratti di rimozione rocce generati. Se impostato su '-', verrà applicato il valore 'Max. Contratti per Tipo'. Per disabilitare questo tipo di contratto, impostare a 0." />
+        <text name="input_CONTRACT_BOOST_OPEN_CONTRACTS" text="Apri il menu dei contratti" />
     </texts>
 </l10n>

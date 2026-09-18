@@ -113,5 +113,6 @@
         <text name="cb_treeTransportMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
         <text name="cb_destructibleRockMissionMaxPerType_short" text="Максимум контрактов на Уничтожение камней" />
         <text name="cb_destructibleRockMissionMaxPerType_long" text="Максимальное количество генерируемых контрактов. Если установлено «-», будет применяться «Максимальное количество контрактов на тип». Чтобы отключить этот тип контрактов, установите на 0." />
+        <text name="input_CONTRACT_BOOST_OPEN_CONTRACTS" text="Открыть меню контрактов" />
     </texts>
 </l10n>

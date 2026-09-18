@@ -112,5 +112,6 @@
         <text name="cb_treeTransportMissionMaxPerType_long" text="Maksymalna liczba generowanych kontraktów na transport drzew. Jeśli ustawione na '-', zastosowana zostanie wartość 'Maksymalna liczba kontraktów na typ'. Aby wyłączyć ten typ kontraktu, ustaw na 0."/>
         <text name="cb_destructibleRockMissionMaxPerType_short" text="Maksymalna liczba kontraktów na usuwanie skał"/>
         <text name="cb_destructibleRockMissionMaxPerType_long" text="Maksymalna liczba generowanych kontraktów na usuwanie skał. Jeśli ustawione na '-', zastosowana zostanie wartość 'Maksymalna liczba kontraktów na typ'. Aby wyłączyć ten typ kontraktu, ustaw na 0."/>
+        <text name="input_CONTRACT_BOOST_OPEN_CONTRACTS" text="Otwórz menu kontraktów" />
     </texts>
 </l10n>
