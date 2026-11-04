@@ -148,9 +148,10 @@ function MissionBalance:applyMaxPerType()
         end
 	end
 
-    -- if we've deleted missions, make sure to save the missions to the savegame file.
+    -- missionsXMLLoad is always nil here (see the early return above), so the missions can't be saved to it.
+    -- Calling saveToXMLFile with nil throws in XMLFile.create and stops the savegame save.
+    -- The game saves the current missions with the savegame.
     if deletedMissions > 0 then
-        Logging.info(MOD_NAME..':BALANCE :: remove missions: %s, save to: %s', deletedMissions, g_currentMission.missionInfo.missionsXMLLoad)
-        g_missionManager:saveToXMLFile(g_currentMission.missionInfo.missionsXMLLoad)
+        Logging.info(MOD_NAME..':BALANCE :: remove missions: %s', deletedMissions)
     end
 end
