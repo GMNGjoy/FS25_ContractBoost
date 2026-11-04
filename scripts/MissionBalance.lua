@@ -118,7 +118,10 @@ end
 --- Scale the mission rewards based on user configuration
 function MissionBalance:applyMaxPerType()
     -- exit early if we haven't loaded missions yet.
-    if not g_missionManager.missions or g_currentMission.missionInfo.missionsXMLLoad then
+    -- Don't check missionsXMLLoad here: it stays set for the whole session in a loaded savegame, so checking it
+    -- skipped the trim in every loaded save. This runs from Player.onStartMission and ItemSystem.save, when the
+    -- missions are already loaded.
+    if not g_missionManager.missions then
         return
     end
 
@@ -134,23 +137,30 @@ function MissionBalance:applyMaxPerType()
 
         -- if the current number of missions is greater than the maximum, remove extra
         if customMaxPerType[missionType] and typeData.numInstances > customMaxPerType[missionType] then
+            -- collect first, then delete: deleting removes the mission from g_missionManager.missions,
+            -- so deleting inside this loop skips the next mission.
             local foundMissions = 0
+            local missionsToDelete = {}
             for _, mission in g_missionManager.missions do
                 if mission.type.name == missionType then
                     foundMissions = foundMissions + 1
                     if foundMissions > customMaxPerType[missionType] then
-                        AbstractMission.delete(mission)
-                        deletedMissions = deletedMissions + 1
-                        if ContractBoost.debug then Logging.info(MOD_NAME..':BALANCE :: remove mission: %s', mission.uniqueId) end
+                        table.insert(missionsToDelete, mission)
                     end
                 end
+            end
+            for _, mission in ipairs(missionsToDelete) do
+                if ContractBoost.debug then Logging.info(MOD_NAME..':BALANCE :: remove mission: %s', mission.uniqueId) end
+                AbstractMission.delete(mission)
+                deletedMissions = deletedMissions + 1
             end
         end
 	end
 
-    -- if we've deleted missions, make sure to save the missions to the savegame file.
+    -- Don't save the missions here: the savegame save writes the current missions list anyway.
+    -- In a new game missionsXMLLoad is nil, and calling saveToXMLFile with nil throws in XMLFile.create and
+    -- stops the savegame save.
     if deletedMissions > 0 then
-        Logging.info(MOD_NAME..':BALANCE :: remove missions: %s, save to: %s', deletedMissions, g_currentMission.missionInfo.missionsXMLLoad)
-        g_missionManager:saveToXMLFile(g_currentMission.missionInfo.missionsXMLLoad)
+        Logging.info(MOD_NAME..':BALANCE :: remove missions: %s', deletedMissions)
     end
 end
