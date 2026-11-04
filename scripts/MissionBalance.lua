@@ -118,7 +118,10 @@ end
 --- Scale the mission rewards based on user configuration
 function MissionBalance:applyMaxPerType()
     -- exit early if we haven't loaded missions yet.
-    if not g_missionManager.missions or g_currentMission.missionInfo.missionsXMLLoad then
+    -- Don't check missionsXMLLoad here: it stays set for the whole session in a loaded savegame, so checking it
+    -- skipped the trim in every loaded save. This runs from Player.onStartMission and ItemSystem.save, when the
+    -- missions are already loaded.
+    if not g_missionManager.missions then
         return
     end
 
@@ -154,9 +157,9 @@ function MissionBalance:applyMaxPerType()
         end
 	end
 
-    -- missionsXMLLoad is always nil here (see the early return above), so the missions can't be saved to it.
-    -- Calling saveToXMLFile with nil throws in XMLFile.create and stops the savegame save.
-    -- The game saves the current missions with the savegame.
+    -- Don't save the missions here: the savegame save writes the current missions list anyway.
+    -- In a new game missionsXMLLoad is nil, and calling saveToXMLFile with nil throws in XMLFile.create and
+    -- stops the savegame save.
     if deletedMissions > 0 then
         Logging.info(MOD_NAME..':BALANCE :: remove missions: %s', deletedMissions)
     end
