@@ -134,16 +134,22 @@ function MissionBalance:applyMaxPerType()
 
         -- if the current number of missions is greater than the maximum, remove extra
         if customMaxPerType[missionType] and typeData.numInstances > customMaxPerType[missionType] then
+            -- collect first, then delete: deleting removes the mission from g_missionManager.missions,
+            -- so deleting inside this loop skips the next mission.
             local foundMissions = 0
+            local missionsToDelete = {}
             for _, mission in g_missionManager.missions do
                 if mission.type.name == missionType then
                     foundMissions = foundMissions + 1
                     if foundMissions > customMaxPerType[missionType] then
-                        AbstractMission.delete(mission)
-                        deletedMissions = deletedMissions + 1
-                        if ContractBoost.debug then Logging.info(MOD_NAME..':BALANCE :: remove mission: %s', mission.uniqueId) end
+                        table.insert(missionsToDelete, mission)
                     end
                 end
+            end
+            for _, mission in ipairs(missionsToDelete) do
+                if ContractBoost.debug then Logging.info(MOD_NAME..':BALANCE :: remove mission: %s', mission.uniqueId) end
+                AbstractMission.delete(mission)
+                deletedMissions = deletedMissions + 1
             end
         end
 	end
